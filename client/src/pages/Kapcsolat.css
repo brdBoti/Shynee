@@ -1,0 +1,99 @@
+.kapcsolat-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 300px);
+  padding: 50px 20px 80px;
+  font-family: 'Playfair Display', serif;
+  box-sizing: border-box;
+}
+
+.kapcsolat-card {
+  background-color: rgba(0, 170, 255, 0.02);
+  padding: 50px 60px;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
+  text-align: center;
+  max-width: 540px;
+  width: 100%;
+  border: none;
+  transition: box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.kapcsolat-title {
+  font-size: 2.75rem;
+  margin-bottom: 2.5rem;
+  color: #00aaff;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.kapcsolat-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 1.2rem;
+  margin: 18px 0;
+  padding: 16px 20px;
+  border-radius: 16px;
+  transition: background 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+}
+
+.kapcsolat-item:hover {
+  background: linear-gradient(145deg, #00394d, #001f2a);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+  border-color: #004d66;
+}
+
+.kapcsolat-item a {
+  color: #85d5fd;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  word-break: break-word;
+}
+
+.kapcsolat-item a:hover {
+  color: #ffffff;
+}
+
+.kapcsolat-icon {
+  font-size: 1.5rem;
+  color: #00aaff;
+  transition: transform 0.3s ease;
+}
+
+.kapcsolat-item:hover .kapcsolat-icon {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .kapcsolat-container {
+    padding: 40px 16px 60px;
+    min-height: auto;
+    flex-direction: column;
+  }
+
+  .kapcsolat-card {
+    padding: 30px 20px;
+    border-radius: 20px;
+  }
+
+  .kapcsolat-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .kapcsolat-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 1rem;
+    padding: 14px 16px;
+  }
+
+  .kapcsolat-icon {
+    font-size: 1.3rem;
+  }
+}

@@ -1,0 +1,88 @@
+
+/* =======================
+   UNIVERSAL BASE RESET
+========================== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =======================
+   HTML & BODY DEFAULTS
+========================== */
+html, body, #root {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: 'Playfair Display', serif;
+  color: #f5f5f5;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  position: relative;
+  margin: 0%;
+  padding: 0%;
+}
+
+body {
+  scrollbar-width: none;         /* Firefox */
+  -ms-overflow-style: none;      /* IE 10+ */
+}
+
+body::-webkit-scrollbar {
+  display: none;                 /* Chrome, Safari, Edge */
+}
+
+
+body {
+  line-height: 1.6;
+  width: 0%;
+}
+
+/* =======================
+   MEDIA ELEMENTS
+========================== */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* =======================
+   TEXT ELEMENTS
+========================== */
+h1, h2, h3, h4, h5, h6, p {
+  overflow-wrap: break-word;
+}
+
+/* =======================
+   LINK NORMALIZATION
+========================== */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =======================
+   FORM ELEMENTS RESET
+========================== */
+input, button, textarea, select {
+  font: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+/* Prevent mobile input zoom */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+input[type="password"] {
+  font-size: 16px;
+}

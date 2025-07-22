@@ -1,0 +1,475 @@
+.rolunk-container {
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+  background: linear-gradient(to bottom, #000000 0%, #001f33 100%);
+}
+
+.hero-rolunk-section {
+  position: relative;
+  width: 100vw;
+  height: 90vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.video-box {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.8) saturate(1.2);
+}
+
+.video-loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+
+.video-control-btn {
+  position: absolute;
+  bottom: 60px;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #00cfff;
+  border: none;
+  font-size: 1.6rem;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 207, 255, 0.4);
+}
+
+.video-control-btn:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 0 14px rgba(0, 207, 255, 0.7);
+}
+
+.fullscreen-btn {
+  right: 20px;
+  background-color: rgba(0, 170, 255, 0.1);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(0, 170, 255, 0.4);
+  box-shadow: 0 0 6px rgba(0, 170, 255, 0.6);
+  color: #00cfff;
+  font-size: 1.8rem;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+
+  opacity: 0;
+  /* teljesen láthatatlan induláskor */
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 1.5s;
+  /* 1.5 másodperc késleltetés */
+}
+
+.fullscreen-btn:hover {
+  background-color: rgba(0, 170, 255, 0.25);
+  box-shadow: 0 0 12px rgba(0, 170, 255, 0.9);
+}
+
+.replay-btn {
+  left: 20px;
+}
+
+.replay-btn::before {
+  content: "";
+  display: inline-block;
+  margin-left: 3px;
+  width: 0;
+  height: 0;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-left: 24px solid #00cfff;
+  transition: border-left-color 0.3s ease;
+}
+
+.replay-btn:hover::before {
+  border-left-color: #0099e0;
+}
+
+.hero-overlay {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0 1rem;
+  max-width: 90%;
+}
+
+.hero-motto {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+  margin-bottom: 50px;
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+.scroll-indicator {
+  font-size: 2.4rem;
+  color: #99ddff;
+  animation: bounce 2s infinite;
+  user-select: none;
+}
+
+.content-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 0;
+}
+
+.image-text-pair {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9rem;
+  width: 100%;
+  max-width: 3000px;
+  margin-bottom: 6rem;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.left-image {
+  flex-direction: row;
+  gap: 9rem;
+}
+
+.right-image {
+  flex-direction: row-reverse;
+  gap: 8rem;
+}
+
+.side-image {
+  width: 46%;
+  max-width: 10000px;
+  border-radius: 20px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+.side-image:not([src*="ShyneeLOGO.png"]) {
+  width: 45%;
+  max-width: 7000px;
+  height: 400px;
+  border-radius: 20px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* ✅ Shadow csak akkor, ha nem shynee.png */
+.side-image:not([src*="ShyneeLOGO.png"]):hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+}
+
+.image-caption {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: #ffffff;
+  max-width: 500px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  animation: fadeInUp 1.6s ease forwards;
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.video-gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 15px;
+  /* vagy amilyen magas legyen az átmenet */
+  pointer-events: none;
+  /* ne akadályozza a kattintást */
+  z-index: 10;
+  /* a videó fölött legyen, de ne takarja az overlay-t */
+  background: linear-gradient(to bottom,
+      #1e252b, #1e252bbd,
+      /* erős fekete/fekete kék kezdés (videó sötét része) */
+      #1e252b77, #1e252b14,
+      /* a navbar sötétkék színe */
+      rgba(0, 31, 51, 0)
+      /* teljes áttetsző legyen alul */
+    );
+}
+
+.video-gradient-bottom-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  pointer-events: none;
+  z-index: 10;
+  background: linear-gradient(to top,
+      #00080c,
+      /* enyhébb sötét alul */
+      #000e1a66,
+      #1e252b33,
+      #1e252b10,
+      rgba(0, 31, 51, 0));
+}
+
+/* 📱 Mobil fixek */
+@media (max-width: 768px) {
+  .video-gradient-overlay {
+    margin-top: 231px;
+    height: 25px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    pointer-events: none;
+    background: linear-gradient(to bottom,
+        #040307,
+        #010006a2,
+        #00121e42,
+        #00121e26,
+        transparent);
+  }
+
+  .video-gradient-bottom-overlay {
+    margin-bottom: 235px;
+    height: 25px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    pointer-events: none;
+    background: linear-gradient(to top,
+        #07060b,
+        #07060b60,
+        #001f3322,
+        transparent);
+  }
+
+  .video-box {
+    width: 100%;
+    height: auto;
+  }
+
+  .rolunk-container {
+    margin-top: 1rem;
+  }
+
+  .hero-video {
+    width: 100%;
+    height: 300px;
+    /* ez jó így, de lehet responsive is */
+    object-fit: contain;
+    /* NE vágja a videót */
+  }
+
+
+  .hero-overlay {
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 90%;
+    padding: 0 1rem;
+    z-index: 2;
+  }
+
+  .hero-motto {
+    font-size: 1.6rem;
+    margin-bottom: 0.1rem;
+  }
+
+  .scroll-indicator {
+    font-size: 2rem;
+    margin-top: 340px;
+  }
+
+  .video-control-btn {
+    bottom: 0.75rem;
+    padding: 10px;
+  }
+
+  .fullscreen-btn {
+    right: 0.75rem;
+    bottom: 3.2rem;
+  }
+
+  .replay-btn {
+    left: 0.75rem;
+    bottom: 0.75rem;
+  }
+
+  .rolunk-container {
+    padding-top: 4rem;
+  }
+
+  .content-section {
+    padding: 2rem 1rem 1rem;
+  }
+
+  .image-text-pair {
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .left-image {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .right-image {
+    flex-direction: row-reverse;
+    gap: 3rem;
+  }
+
+  .side-image.side-image:not([src*="ShyneeLOGO.png"]) {
+    width: 90%;
+    height: 200px;
+    max-width: none;
+  }
+
+  .side-image {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .image-caption {
+    font-weight: 700;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1rem;
+    padding: 0 0.5rem;
+  }
+}
+
+.page-motto {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: #00b8e6;
+  font-size: 2.6rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  padding: 2rem 1rem;
+  margin-bottom: 7rem;
+
+  position: relative;
+  z-index: 2;
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: softFlow 8s ease-in-out infinite;
+  text-shadow:
+    0 0 0px rgb(3, 196, 244),
+    0 0 0px rgb(0, 184, 230);
+  transition: all 0.3s ease;
+}
+
+
+
+.shynee-button {
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  padding: 0.7em 2em;
+  border: 3px solid #00aaff;
+  border-radius: 2px;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+  color: #00aaff;
+  text-decoration: none;
+  transition: 0.3s ease all;
+  z-index: 1;
+  background-color: transparent;
+  margin-top: 1.5rem;
+  bottom: 130px;
+  left: 530px;
+  cursor: pointer;
+}
+
+.shynee-button:before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: '';
+  background-color: #00aaff;
+  z-index: -1;
+}
+
+.shynee-button:hover,
+.shynee-button:focus {
+  color: white;
+}
+
+.shynee-button:hover:before,
+.shynee-button:focus:before {
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
+.shynee-button:active {
+  transform: scale(0.95);
+}
+

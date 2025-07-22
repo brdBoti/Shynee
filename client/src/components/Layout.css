@@ -1,0 +1,53 @@
+.page-container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Home */
+.page-home {
+  background: linear-gradient(-45deg, #00aaff77, #4a4949, #1e252b, #1e252b);
+  background-size: 400% 400%;
+  animation: gradientFlow 20s ease infinite;
+}
+
+/* Rendelés oldal */
+.page-rendeles {
+  background-color: #1e252b;
+}
+
+.page-rendeles-belso{
+  background-color: #1e252b;
+}
+
+.page-rendeles-kulso{ 
+  background-color: #1e252b;
+}
+
+.page-rendeles-kulso-belso{
+  background-color: #1e252b;
+}
+
+
+/* Rólunk oldal */
+.page-rolunk {
+ background-color: #1e252b;
+}
+
+/* Média oldal */
+.page-media {
+  background: linear-gradient(45deg, #333, #666);
+}
+
+/* Kapcsolat oldal */
+.page-kapcsolat {
+  background-color: #1e252b;
+}
+
+/* Keyframes, ha kell a home gradienthez */
+@keyframes gradientFlow {
+  0%   { background-position:   0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position:   0% 50%; }
+}

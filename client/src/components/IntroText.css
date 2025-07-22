@@ -1,0 +1,21 @@
+
+
+.intro-typewriter {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: 'Courier New', monospace;
+  color: #ffffff;
+  white-space: normal; /* ez fontos: ne legyen pre-wrap! */
+  text-align: center;
+  overflow: hidden;
+}
+
+.line {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.word {
+  display: inline-block; /* fontos, hogy az animáció ne törje meg a szövegfolyamot */
+  white-space: pre;
+}

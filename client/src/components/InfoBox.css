@@ -1,0 +1,22 @@
+.info-box {
+  max-width: 350px;
+  margin: 3rem 0;
+  padding: 1.5rem 2rem;
+  background: rgba(212, 175, 55, 0.15);
+  color: #d4af37;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+  user-select: text;
+}
+
+.info-box.left {
+  align-self: flex-start;
+}
+
+.info-box.right {
+  align-self: flex-end;
+  text-align: right;
+}
