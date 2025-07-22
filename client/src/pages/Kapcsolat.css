@@ -1,99 +1,284 @@
 .kapcsolat-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  min-height: calc(100vh - 300px);
-  padding: 50px 20px 80px;
+  padding: 20px 20px 100px; /* fentebb */
   font-family: 'Playfair Display', serif;
   box-sizing: border-box;
+  text-align: center;
+   background: linear-gradient(to bottom, #1e252b 0%, #001f33 100%);
+  overflow-x: hidden;
+  margin: 0;
+  margin-top: 40px;
 }
 
-.kapcsolat-card {
-  background-color: rgba(0, 170, 255, 0.02);
-  padding: 50px 60px;
-  border-radius: 24px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
-  text-align: center;
-  max-width: 540px;
-  width: 100%;
+.kapcsolat-form input,
+.kapcsolat-form textarea {
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #003355; 
+  background-color: rgba(0, 31, 51, 0.6); 
+  color: #eee;
+}
+
+.kapcsolat-form input::placeholder,
+.kapcsolat-form textarea::placeholder {
+  color: #aaccee; /* halvány kék a placeholdernek */
+}
+
+.kapcsolat-form button {
+  background-color: #0077cc;
+  color: white;
   border: none;
-  transition: box-shadow 0.3s ease;
-  box-sizing: border-box;
+  padding: 12px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-family: 'Poppins', sans-serif; /* betűtípus gombra */
+}
+
+.kapcsolat-form button:hover {
+  background-color: #005fa3;
 }
 
 .kapcsolat-title {
-  font-size: 2.75rem;
-  margin-bottom: 2.5rem;
+  font-family: 'Poppins', sans-serif; /* betűtípus módosítás */
+  font-weight: 700; /* vastagabb kiemelés */
+  font-size: 3rem; /* nagyobb méret */
+  margin-bottom: 40px;
   color: #00aaff;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  margin-top: 0; /* hogy feljebb legyen */
 }
 
-.kapcsolat-item {
+/* Ikonok vízszintesen, középre */
+.ikonok-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  gap: 200px; /* nagyobb távolság az ikonok között */
+  margin-bottom: 100px;
+}
+
+.ikon-link {
+  font-size: 2.5rem;
+  color: #00aaff;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.ikon-link:hover {
+  color: #ffffff;
+  transform: scale(1.15);
+}
+
+/* Form kerettel */
+.kapcsolat-form {
+  border: 2px solid #0077cc;
+  border-radius: 16px;
+  padding: 30px;
+  width: 100%;
+  max-width: 500px;
+  background-color: rgba(255, 255, 255, 0.02);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 119, 204, 0.2);
+}
+
+.form-heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #00aaff;
+  text-align: center;
+  margin-bottom: 1em;
+  text-shadow: 0 2px 10px rgba(0, 170, 255, 0.2);
+  word-break: keep-all;
+}
+
+
+.kapcsolat-form input,
+.kapcsolat-form textarea {
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+}
+
+.kapcsolat-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.kapcsolat-form button {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.kapcsolat-form button:hover {
+  background-color: #005fa3;
+}
+
+.success-msg {
+  color: green;
+  font-weight: bold;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  font-family: 'Poppins', sans-serif;
+  gap: 10px;
+  padding: 2.5em 3em; /* kicsit nagyobb padding minden oldalon */
+  background-color: rgba(0, 31, 51, 0.6);
+  border-radius: 20px;
+  border: 2px solid #0077cc;
+  box-shadow: 0 8px 24px rgba(0, 119, 204, 0.2);
+  max-width: 600px;   /* szélesebb forma */
+  width: 90%;         /* reszponzivitás megtartása */
+}
+
+
+.form-field {
   display: flex;
   align-items: center;
-  gap: 16px;
-  font-size: 1.2rem;
-  margin: 18px 0;
-  padding: 16px 20px;
-  border-radius: 16px;
-  transition: background 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-  border: 1px solid transparent;
-  box-sizing: border-box;
+  justify-content: center;
+  gap: 0.5em;
+  border-radius: 8px;
+  padding: 0.6em;
+  border: 1px solid #003355; /* sötétkék keret */
+  background-color: rgba(0, 31, 51, 0.6); /* világosabb kék */
+  box-shadow: inset 2px 5px 10px rgb(0 51 85 / 0.4);
+  color: #eee;
+  font-family: 'Poppins', sans-serif;
 }
 
-.kapcsolat-item:hover {
-  background: linear-gradient(145deg, #00394d, #001f2a);
-  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
-  border-color: #004d66;
+.input-field {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: #aaccee; /* halvány kék szöveg */
+  padding-inline: 1em;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
 }
 
-.kapcsolat-item a {
-  color: #85d5fd;
-  text-decoration: none;
-  transition: color 0.3s ease;
-  word-break: break-word;
+.input-field::placeholder {
+  color: #aaccee; /* halvány kék placeholder */
 }
 
-.kapcsolat-item a:hover {
-  color: #ffffff;
+
+.sendMessage-btn {
+  cursor: pointer;
+  margin-bottom: 3em;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background-color: #0077cc; /* gomb kék */
+  color: white;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 119, 204, 0.4);
 }
 
-.kapcsolat-icon {
-  font-size: 1.5rem;
-  color: #00aaff;
-  transition: transform 0.3s ease;
+.sendMessage-btn:hover {
+  background-color: #005fa3;
+  color: white;
+  box-shadow: 0 6px 14px rgba(0, 95, 163, 0.8);
 }
 
-.kapcsolat-item:hover .kapcsolat-icon {
-  transform: scale(1.1);
-}
+@media screen and (max-width: 600px) {
 
-@media (max-width: 768px) {
-  .kapcsolat-container {
-    padding: 40px 16px 60px;
-    min-height: auto;
-    flex-direction: column;
-  }
-
-  .kapcsolat-card {
-    padding: 30px 20px;
-    border-radius: 20px;
+  .kapcsolat-container{
+    margin-top: -40px;
   }
 
   .kapcsolat-title {
     font-size: 2rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 20px;
+    margin-top: 50px;
   }
 
-  .kapcsolat-item {
+  .kapcsolat-container {
+    padding: 10px 10px 60px;
+  }
+
+  .ikonok-section {
+    flex-direction: flex;
+    gap: 80px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+
+  .ikon-link {
+    font-size: 2rem;
+  }
+
+  .kapcsolat-form {
+    padding: 20px;
+    max-width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 119, 204, 0.15);
+  }
+
+  .form {
+    padding: 1.5em 0.4em;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 119, 204, 0.15);
+    border-radius: 14px;
+  }
+
+  .form-heading {
+    font-size: 1.25rem;
+    margin-bottom: 1em;
+  }
+
+  .form-field {
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
-    font-size: 1rem;
-    padding: 14px 16px;
+    padding: 0.8em;
   }
 
-  .kapcsolat-icon {
-    font-size: 1.3rem;
+  .input-field {
+    padding-inline: 0.5em;
+    font-size: 0.95rem;
+  }
+
+  .sendMessage-btn {
+    padding: 10px;
+    font-size: 0.95rem;
+    width: 100%;
   }
 }
+
+/* Autofill háttér fix - Chrome és Safari */
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px rgba(0, 31, 51, 0.6) inset !important;
+  -webkit-text-fill-color: #aaccee !important;
+  transition: background-color 5000s ease-in-out 0s;
+  caret-color: white;
+}
+
+/* Autofill fix Firefoxhoz (korlátozott támogatás) */
+input:-moz-autofill,
+textarea:-moz-autofill {
+  box-shadow: 0 0 0 1000px rgba(0, 31, 51, 0.6) inset !important;
+  -moz-text-fill-color: #aaccee !important;
+  caret-color: white;
+}
+

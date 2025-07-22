@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import './Title.css';
-import shyneetextpng from '../images/shyneetextniceres2.png';
+import shyneetextpng from '../images/shyneetextniceres2.PNG';
 
 const subText = "Sexshop";
 const typingSpeed = 120;

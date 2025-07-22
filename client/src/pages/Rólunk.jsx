@@ -185,11 +185,6 @@ export default function Rólunk() {
       <footer className="page-motto">
         "Shynee - Mindenhol"
       </footer>
-      <Link to={"/rendeles"}>
-      <button className="shynee-button">
-        Rendelés
-      </button>
-      </Link>
       
     </div>
   );

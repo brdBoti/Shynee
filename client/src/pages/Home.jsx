@@ -7,7 +7,7 @@ import kep2 from '../images/kep2.png';
 import kep3 from '../images/kep3.png';
 import kep4 from '../images/kep4.png';
 import './Home.css';
-import FAQ from '../components/Faq';
+import FAQ from '../components/FAQ';
 
 export default function Home() {
   const homeImages = [

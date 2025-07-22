@@ -268,9 +268,9 @@
 @media (max-width: 768px) {
   .video-gradient-overlay {
     margin-top: 231px;
-    height: 25px;
+    height: 35px;
     position: absolute;
-    top: 0;
+    top: -1000px;
     left: 0;
     width: 100%;
     z-index: 10;
@@ -287,7 +287,7 @@
     margin-bottom: 235px;
     height: 25px;
     position: absolute;
-    bottom: 0;
+    bottom: -10000px;
     left: 0;
     width: 100%;
     z-index: 10;
@@ -422,54 +422,54 @@
 
 
 .shynee-button {
-  font-size: 18px;
+  font-size: 1.1rem;
   letter-spacing: 2px;
   text-transform: uppercase;
-  display: inline-block;
-  text-align: center;
-  font-weight: bold;
-  padding: 0.7em 2em;
-  border: 3px solid #00aaff;
-  border-radius: 2px;
-  position: relative;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+  font-weight: 700;
+  padding: 0.75em 2em;
+  border: 2px solid #00aaff;
+  border-radius: 6px;
   color: #00aaff;
-  text-decoration: none;
-  transition: 0.3s ease all;
-  z-index: 1;
   background-color: transparent;
-  margin-top: 1.5rem;
-  bottom: 130px;
-  left: 530px;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
   cursor: pointer;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 2px 10px rgba(0, 170, 255, 0.2);
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 1.5rem;
 }
 
-.shynee-button:before {
-  transition: 0.5s all ease;
+.shynee-button::before {
+  content: '';
   position: absolute;
   top: 0;
   left: 50%;
   right: 50%;
   bottom: 0;
-  opacity: 0;
-  content: '';
   background-color: #00aaff;
+  opacity: 0;
   z-index: -1;
+  transition: all 0.4s ease;
+  border-radius: 6px;
 }
 
 .shynee-button:hover,
 .shynee-button:focus {
-  color: white;
+  color: #ffffff;
 }
 
-.shynee-button:hover:before,
-.shynee-button:focus:before {
+.shynee-button:hover::before,
+.shynee-button:focus::before {
   left: 0;
   right: 0;
   opacity: 1;
 }
 
 .shynee-button:active {
-  transform: scale(0.95);
+  transform: scale(0.97);
 }
 

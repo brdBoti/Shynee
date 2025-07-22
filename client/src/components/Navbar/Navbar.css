@@ -25,12 +25,6 @@
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.navbar--hidden {
-  transform: translateY(-100%);
-  opacity: 0;
-  pointer-events: none;
-}
-
 .navbar__logo {
   position: absolute;
   left: -10px;
