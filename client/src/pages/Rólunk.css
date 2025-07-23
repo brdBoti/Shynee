@@ -174,8 +174,8 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.side-image:hover{
-    transform: scale(1.03);
+.side-image:hover {
+  transform: scale(1.03);
 }
 
 
@@ -378,7 +378,7 @@
     gap: 3rem;
   }
 
-  .side-image.side-image:not([src*="ShyneeLOGO.png"]) {
+  .side-image:not(.shynee-logo) {
     width: 90%;
     height: 200px;
     max-width: none;
@@ -474,4 +474,3 @@
 .shynee-button:active {
   transform: scale(0.97);
 }
-
