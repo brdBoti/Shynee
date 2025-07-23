@@ -175,7 +175,7 @@ export default function Rólunk() {
       <footer className="page-motto">
         "Shynee - Mindenhol"
       </footer>
-
+      
     </div>
   );
 }
