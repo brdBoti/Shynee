@@ -5,16 +5,18 @@ import './Footer.css';
 import simplepayLogo from '../images/logos/simplepay.svg';
 import visaLogo from '../images/logos/Visa_Inc._logo.svg';
 import mastercardLogo from '../images/logos/Mastercard.svg';
-import shyneeText from '../images/shyneetextniceres2.PNG';  // <-- ide importáld a képet
+import shyneeText from '../images/shyneetextniceres2.PNG';
 
 export default function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // smooth scroll
+  };
+
   return (
     <footer className="footer">
       <div className="footer-main">
         <div className="footer-section left">
-          {/* Szöveg helyett kép */}
           <img src={shyneeText} alt="Shynee logo" className="footer-logo" />
-          
           <div className="footer-hours">
             <ul>
               <li><span>Hétfő - Vasárnap:</span> 08:00 - 20:00</li>
@@ -25,9 +27,9 @@ export default function Footer() {
         <div className="footer-section center">
           <h4>Menü</h4>
           <nav>
-            <Link to="/">Főoldal</Link>
-            <Link to="/rolunk">Rólunk</Link>
-            <Link to="/kapcsolat">Kapcsolat</Link>
+            <Link to="/" onClick={scrollToTop}>Főoldal</Link>
+            <Link to="/rolunk" onClick={scrollToTop}>Rólunk</Link>
+            <Link to="/kapcsolat" onClick={scrollToTop}>Kapcsolat</Link>
           </nav>
         </div>
 
