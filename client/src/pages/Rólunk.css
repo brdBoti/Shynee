@@ -174,9 +174,13 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.side-image:hover{
+    transform: scale(1.03);
+}
 
 
-.side-image:not([src*="ShyneeLOGO.png"]) {
+
+.side-image:not(.shynee-logo) {
   width: 45%;
   max-width: 7000px;
   height: 400px;
@@ -185,9 +189,7 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
-/* ✅ Shadow csak akkor, ha nem shynee.png */
-.side-image:not([src*="ShyneeLOGO.png"]):hover {
+.side-image:not(.shynee-logo):hover {
   transform: scale(1.03);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
 }

@@ -155,37 +155,27 @@ export default function Rólunk() {
       </section>
 
       <section className="content-section">
-        {imageData.map((item, index) => {
-          const [ref, inView] = useInView({
-            triggerOnce: true,
-            threshold: 0.2,
-          });
-
-          return (
-            <motion.div
-              ref={ref}
-              className={`image-text-pair ${index % 2 === 0 ? "left-image" : "right-image"
-                }`}
+        {
+          imageData.map((item, index) => (
+            <div
               key={index}
-              initial={{ opacity: 0, y: 40 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 1.4, ease: "easeOut", delay: index * 0.3 }}
-            >
-              <motion.img
+              className={`image-text-pair ${index % 2 === 0 ? "left-image" : "right-image"}`}
+            > 
+              <img
                 src={item.image}
-                alt={`Kép ${index + 1}`}
-                className="side-image"
-                whileHover={{ scale: 1.02 }}
+                alt={item.image === shynee ? "shyneelogo" : `image-${index}`}
+                className={`side-image ${item.image === shynee ? "shynee-logo" : ""}`}
               />
               <p className="image-caption">{item.text}</p>
-            </motion.div>
-          );
-        })}
+            </div>
+          ))
+        }
+
       </section>
       <footer className="page-motto">
         "Shynee - Mindenhol"
       </footer>
-      
+
     </div>
   );
 }
