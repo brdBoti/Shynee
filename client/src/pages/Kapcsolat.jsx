@@ -1,12 +1,22 @@
 import './Kapcsolat.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaPhoneAlt, FaWhatsapp, FaInstagram } from 'react-icons/fa';
+import { Typewriter } from 'react-simple-typewriter';
+import { useInView } from 'react-intersection-observer';
 
 export default function Kapcsolat() {
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [showCursor, setShowCursor] = useState(true); // kurzor állapot
+
+  const { ref: formRef, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShowCursor(false), 3000); // 3 mp után eltűnik a kurzor
+    return () => clearTimeout(timer);
+  }, []);
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -41,18 +51,35 @@ export default function Kapcsolat() {
     <div className="kapcsolat-container">
       <motion.h1
         className="kapcsolat-title"
-        initial={{ opacity: 0, y: -30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
       >
-        Lépj velünk kapcsolatba
+        <Typewriter
+          words={['Írj nekünk bátran!']}
+          loop={1}
+          cursor={showCursor}
+          cursorStyle="|"
+          typeSpeed={60}
+          deleteSpeed={0}
+          delaySpeed={999999}
+        />
       </motion.h1>
+
+      <motion.p
+        className="subtitle"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1, duration: 0.5 }}
+      >
+        Elérhetsz minket telefonon, WhatsAppon vagy az alábbi űrlapon keresztül.
+      </motion.p>
 
       <motion.div
         className="ikonok-section"
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
+        transition={{ duration: 0.6, delay: 1.2 }}
       >
         <a href="tel:+36201234567" className="ikon-link" aria-label="Telefon">
           <FaPhoneAlt />
@@ -66,91 +93,102 @@ export default function Kapcsolat() {
         >
           <FaWhatsapp />
         </a>
+        <a
+          href="https://instagram.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="ikon-link"
+          aria-label="Instagram"
+        >
+          <FaInstagram />
+        </a>
       </motion.div>
 
-      <AnimatePresence mode="wait">
-        {!sent && (
-          <motion.form
-            className="form"
-            onSubmit={handleSubmit}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -30, scale: 0.8 }}
-            transition={{ duration: 0.6 }}
-            key="form"
-          >
-            <p className="form-heading">Személyesen?</p>
+      {/* Görgetésre megjelenő FORM */}
+      <div ref={formRef} style={{ marginTop: '100px', width: '100%' }}>
+        <AnimatePresence mode="wait">
+          {inView && !sent && (
+            <motion.form
+              className="form"
+              onSubmit={handleSubmit}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 50 }}
+              transition={{ duration: 0.8 }}
+              key="form"
+            >
+              <p className="form-heading">Személyesen?</p>
 
-            <div className="form-field">
-              <input
-                required
-                placeholder="Név"
-                className="input-field"
-                type="text"
-                name="name"
-              />
-            </div>
+              <div className="form-field">
+                <input
+                  required
+                  placeholder="Név"
+                  className="input-field"
+                  type="text"
+                  name="name"
+                />
+              </div>
 
-            <div className="form-field">
-              <input
-                required
-                placeholder="Email"
-                className="input-field"
-                type="email"
-                name="email"
-              />
-            </div>
+              <div className="form-field">
+                <input
+                  required
+                  placeholder="Email"
+                  className="input-field"
+                  type="email"
+                  name="email"
+                />
+              </div>
 
-            <div className="form-field">
-              <input
-                required
-                placeholder="Tárgy"
-                className="input-field"
-                type="text"
-                name="subject"
-              />
-            </div>
+              <div className="form-field">
+                <input
+                  required
+                  placeholder="Tárgy"
+                  className="input-field"
+                  type="text"
+                  name="subject"
+                />
+              </div>
 
-            <div className="form-field">
-              <textarea
-                required
-                placeholder="Üzenet"
-                cols="30"
-                rows="3"
-                className="input-field"
-                name="message"
-              ></textarea>
-            </div>
+              <div className="form-field">
+                <textarea
+                  required
+                  placeholder="Üzenet"
+                  cols="30"
+                  rows="3"
+                  className="input-field"
+                  name="message"
+                ></textarea>
+              </div>
 
-            <button className="sendMessage-btn" type="submit" disabled={loading}>
-              {loading ? 'Küldés...' : 'Küldés'}
-            </button>
+              <button className="sendMessage-btn" type="submit" disabled={loading}>
+                {loading ? 'Küldés...' : 'Küldés'}
+              </button>
 
-            {error && <p className="error-msg">{error}</p>}
-          </motion.form>
-        )}
+              {error && <p className="error-msg">{error}</p>}
+            </motion.form>
+          )}
 
-        {sent && (
-          <motion.div
-            className="success-msg"
-            initial={{ opacity: 0, scale: 0.7 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.7 }}
-            transition={{ duration: 0.6 }}
-            key="success"
-            style={{
-              fontSize: '2rem',
-              fontWeight: '700',
-              color: '#00aaff',
-              marginTop: '2rem',
-              fontFamily: "'Poppins', sans-serif" // ide ez jön
-            }}
-          >
-            Köszönjük! Üzeneted sikeresen elküldtük.
-          </motion.div>
-
-        )}
-      </AnimatePresence>
+          {sent && (
+            <motion.div
+              className="success-msg"
+              initial={{ opacity: 0, scale: 0.7 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.7 }}
+              transition={{ duration: 0.6 }}
+              key="success"
+              style={{
+                fontSize: '2rem',
+                fontWeight: '700',
+                color: '#00aaff',
+                marginTop: '2rem',
+                fontFamily: "'Poppins', sans-serif",
+              }}
+            >
+              Köszönjük! Üzeneted sikeresen elküldtük.
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
     </div>
   );
 }
