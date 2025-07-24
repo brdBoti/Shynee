@@ -93,15 +93,6 @@ export default function Kapcsolat() {
         >
           <FaWhatsapp />
         </a>
-        <a
-          href="https://instagram.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="ikon-link"
-          aria-label="Instagram"
-        >
-          <FaInstagram />
-        </a>
       </motion.div>
 
       {/* Görgetésre megjelenő FORM */}
