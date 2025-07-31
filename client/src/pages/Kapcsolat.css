@@ -1,70 +1,67 @@
 .kapcsolat-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px 20px 100px; /* fentebb */
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 40px 60px 100px;
   font-family: 'Playfair Display', serif;
   box-sizing: border-box;
-  text-align: center;
-   background: linear-gradient(to bottom, #1e252b 0%, #001f33 100%);
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #1e252b 0%, #001f33 100%);
+  gap: 60px;
+  margin-top: 50px;
   overflow-x: hidden;
-  margin: 0;
-  margin-top: 90px;
-}
-
-.kapcsolat-form input,
-.kapcsolat-form textarea {
-  padding: 12px;
-  font-size: 1rem;
-  border-radius: 8px;
-  border: 1px solid #003355; 
-  background-color: rgba(0, 31, 51, 0.6); 
   color: #eee;
+
 }
 
-.kapcsolat-form input::placeholder,
-.kapcsolat-form textarea::placeholder {
-  color: #aaccee; /* halvány kék a placeholdernek */
-}
-
-.kapcsolat-form button {
-  background-color: #0077cc;
-  color: white;
-  border: none;
-  padding: 12px;
-  font-weight: bold;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  font-family: 'Poppins', sans-serif; /* betűtípus gombra */
-}
-
-.kapcsolat-form button:hover {
-  background-color: #005fa3;
+.bal-oldal {
+  flex: 1;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 .kapcsolat-title {
-  font-family: 'Poppins', sans-serif; /* betűtípus módosítás */
-  font-weight: 700; /* vastagabb kiemelés */
-  font-size: 3rem; /* nagyobb méret */
-  margin-bottom: 40px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  margin-left: 30px;
   color: #00aaff;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-  margin-top: 0; /* hogy feljebb legyen */
+  line-height: 1.2;
+  user-select: none;
 }
 
-/* Ikonok vízszintesen, középre */
+.subtitle {
+  font-size: 1.2rem;
+  color: #aaccee;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 40px;
+  margin-top: -10px;
+  text-shadow: 0 2px 10px rgba(0, 170, 255, 0.2);
+  line-height: 1.4;
+}
+
+/* Ikonok oszlop */
 .ikonok-section {
   display: flex;
   justify-content: center;
-  margin-top: 50px;
-  gap: 200px; /* nagyobb távolság az ikonok között */
-  margin-bottom: 100px;
+  gap: 50px;
+  width: 100%;
 }
 
 .ikon-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-size: 2.5rem;
   color: #00aaff;
+  text-decoration: none;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -73,90 +70,67 @@
   transform: scale(1.15);
 }
 
-/* Form kerettel */
-
-.form-heading {
+/* Ikon alatt a cím */
+.ikon-title {
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #aaccee;
   font-family: 'Poppins', sans-serif;
+  user-select: none;
+}
+
+/* Jobb oldali form container */
+.jobb-oldal {
+  flex: 1;
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Form maga */
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  padding: 2.5em 2em;
+  background-color: rgba(0, 31, 51, 0.6);
+  border-radius: 20px;
+  border: 2px solid #ffffffb0;
+  box-sizing: border-box;
+  box-shadow: 0 8px 24px rgba(0, 119, 204, 0.2);
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  max-width: 600px;
+  color: #eee;
+  background-color: rgba(0, 31, 51, 0.13); /* áttetszőbb */
+  backdrop-filter: blur(12px); /* üveghatás, finom homály */
+  border: 1.5px solid rgba(255, 255, 255, 0.158); /* enyhébb, áttetszőbb keret */
+  box-shadow: 0 8px 32px rgba(74, 115, 144, 0.155); /* halványabb árnyék */
+}
+
+/* Form fejléc */
+.form-heading {
   font-size: 1.5rem;
   font-weight: 600;
   color: #00aaff;
   text-align: center;
   margin-bottom: 1em;
   text-shadow: 0 2px 10px rgba(0, 170, 255, 0.2);
-  word-break: keep-all;
+  user-select: none;
 }
 
-
-.kapcsolat-form input,
-.kapcsolat-form textarea {
-  padding: 12px;
-  font-size: 1rem;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  background-color: #f8f8f8;
-}
-
-.kapcsolat-form textarea {
-  min-height: 120px;
-  resize: vertical;  display: flex;
-  flex-direction: column;
-  margin: 0 auto;               /* középre igazítás */
-  max-width: 800px;             /* nagyobb alap szélesség */
-  width: 100%;                  /* teljes elérhető szélesség */
-  padding: 3em 3em;
-}
-
-.kapcsolat-form button {
-  background-color: #0077cc;
-  color: white;
-  border: none;
-  padding: 12px;
-  font-weight: bold;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.kapcsolat-form button:hover {
-  background-color: #005fa3;
-}
-
-.success-msg {
-  color: green;
-  font-weight: bold;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-self: center;
-  margin: 0 auto;
-  font-family: 'Poppins', sans-serif;
-  gap: 10px;
-  padding: 2.5em 2em; /* kicsit nagyobb padding minden oldalon */
-  background-color: rgba(0, 31, 51, 0.6);
-  border-radius: 20px;
-  border: 2px solid #ffffffb0;
-  box-sizing: border-box;
-  box-shadow: 0 8px 24px rgba(0, 119, 204, 0.2);
-  max-width: 600px;   /* szélesebb forma */
-  width: 90%;         /* reszponzivitás megtartása */
-}
-
-
+/* Form mezők */
 .form-field {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 0.5em;
   border-radius: 8px;
   padding: 0.6em;
-  border: 1px solid #003355; /* sötétkék keret */
-  background-color: rgba(0, 31, 51, 0.6); /* világosabb kék */
+  border: 1px solid #003355;
+  background-color: rgba(0, 31, 51, 0.6);
   box-shadow: inset 2px 5px 10px rgb(0 51 85 / 0.4);
-  color: #eee;
-  font-family: 'Poppins', sans-serif;
 }
 
 .input-field {
@@ -164,130 +138,130 @@
   border: none;
   outline: none;
   width: 100%;
-  color: #fdfdfd; /* halvány kék szöveg */
+  color: #fdfdfd;
   padding-inline: 1em;
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
 }
 
 .input-field::placeholder {
-  color: #aaccee; /* halvány kék placeholder */
+  color: #aaccee;
 }
 
+/* Autofill fix - eltünteti a fehér hátteret automatikus kitöltésnél */
+.input-field:-webkit-autofill,
+.input-field:-webkit-autofill:hover,
+.input-field:-webkit-autofill:focus,
+.input-field:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0px 1000px rgba(0, 31, 51, 0.6) inset !important;
+  box-shadow: 0 0 0px 1000px rgba(0, 31, 51, 0.6) inset !important;
+  -webkit-text-fill-color: #fdfdfd !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
 
+.kapcsolat-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Gomb */
 .sendMessage-btn {
   cursor: pointer;
-  margin-bottom: 3em;
+  margin-top: 1em;
   padding: 12px;
   border-radius: 8px;
   border: none;
-  outline: none;
-  background-color: #0077cc; /* gomb kék */
+  background-color: #0077cc;
   color: white;
   font-weight: bold;
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 119, 204, 0.4);
 }
 
 .sendMessage-btn:hover {
   background-color: #005fa3;
-  color: white;
   box-shadow: 0 6px 14px rgba(0, 95, 163, 0.8);
 }
 
-.subtitle {
-  font-size: 1.2rem;
-  color: #aaccee;
+/* Üzenet sikeres küldés */
+.success-msg {
+  color: #00aaff;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-top: 2rem;
   font-family: 'Poppins', sans-serif;
-  margin-top: -20px;
-  margin-bottom: 30px;
-  text-shadow: 0 2px 10px rgba(0, 170, 255, 0.2);
+  text-align: center;
 }
 
-@media screen and (max-width: 600px) {
+/* Hibaüzenet */
+.error-msg {
+  color: #ff6b6b;
+  font-weight: 600;
+  margin-top: 10px;
+  text-align: center;
+}
 
-  .kapcsolat-container{
-    margin-top: 0px;
+/* Responsive */
+@media screen and (max-width: 900px) {
+  .kapcsolat-container {
+    flex-direction: column;
+    padding: 20px 30px 60px;
+    gap: 40px;
+  }
+
+  .bal-oldal, .jobb-oldal {
+    max-width: 100%;
   }
 
   .kapcsolat-title {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    margin-top: 50px;
-  }
-
-  .subtitle{
-    margin-top: -5px;
-  }
-
-  .kapcsolat-container {
-    padding: 10px 10px 60px;
+    font-size: 2.4rem;
   }
 
   .ikonok-section {
-    flex-direction: flex;
-    gap: 80px;
-    margin-top: 30px;
-    margin-bottom: 50px;
-  }
-
-  .ikon-link {
-    font-size: 2rem;
-  }
-
-
-
-  .form {
-    margin-top: -30px;
-    padding: 1.5em 0.4em;
-    width: 100%;
-    max-width: 100%;
-    box-shadow: 0 4px 12px rgba(0, 119, 204, 0.15);
-    border-radius: 14px;
-  }
-
-  .form-heading {
-    font-size: 1.25rem;
-    margin-bottom: 1em;
-  }
-
-  .form-field {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0.8em;
-  }
-
-  .input-field {
-    padding-inline: 0.5em;
-    font-size: 0.95rem;
-  }
-
-  .sendMessage-btn {
-    padding: 10px;
-    font-size: 0.95rem;
-    width: 100%;
+    gap: 30px;
   }
 }
 
-/* Autofill háttér fix - Chrome és Safari */
-input:-webkit-autofill,
-textarea:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 1000px rgba(0, 31, 51, 0.6) inset !important;
-  -webkit-text-fill-color: #aaccee !important;
-  transition: background-color 5000s ease-in-out 0s;
-  caret-color: white;
+.custom-cursor {
+  display: inline-block;
+  width: 10px; /* fix hely a kurzornak */
+  color: #00aaff;
+  user-select: none;
+  /* opcionálisan animáció, ha akarod */
 }
 
-/* Autofill fix Firefoxhoz (korlátozott támogatás) */
-input:-moz-autofill,
-textarea:-moz-autofill {
-  box-shadow: 0 0 0 1000px rgba(0, 31, 51, 0.6) inset !important;
-  -moz-text-fill-color: #aaccee !important;
-  caret-color: white;
+/* --- meglévő CSS változatlanul maradt --- */
+
+/* Beküldés utáni állapot */
+.thankyou-container {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 50vh; 
+  gap: 1rem;
+  margin-bottom: 7rem;
 }
 
+.thankyou-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00aaff;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  max-width: 90%;
+  line-height: 1.4;
+}
 
-
-
+/* Mobil optimalizáció */
+@media screen and (max-width: 600px) {
+  .thankyou-text {
+    font-size: 1.6rem;
+  }
+  .ikonok-section {
+    gap: 25px;
+  }
+}
