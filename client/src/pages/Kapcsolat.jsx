@@ -175,7 +175,7 @@ export default function Kapcsolat() {
                     ></textarea>
                   </div>
 
-                  <div className="form-field" style={{ marginBottom: '10px' }}>
+                  <div style={{ marginBottom: '10px' }}>
                     <ReCAPTCHA
                       sitekey="YOUR_RECAPTCHA_SITE_KEY"
                       onChange={token => setRecaptchaToken(token)}
