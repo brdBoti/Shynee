@@ -186,15 +186,6 @@
   box-shadow: 0 6px 14px rgba(0, 95, 163, 0.8);
 }
 
-/* Üzenet sikeres küldés */
-.success-msg {
-  color: #00aaff;
-  font-weight: 700;
-  font-size: 2rem;
-  margin-top: 2rem;
-  font-family: 'Poppins', sans-serif;
-  text-align: center;
-}
 
 
 /* Responsive */
@@ -226,22 +217,19 @@
   /* opcionálisan animáció, ha akarod */
 }
 
-/* --- meglévő CSS változatlanul maradt --- */
-
-/* Beküldés utáni állapot */
 .thankyou-container {
   display:flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 50vh; 
+  height: 60vh; 
   gap: 1rem;
   margin-bottom: 7rem;
 }
 
 .thankyou-text {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
   color: #00aaff;
   font-family: 'Poppins', sans-serif;
