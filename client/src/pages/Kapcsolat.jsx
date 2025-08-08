@@ -11,6 +11,7 @@ export default function Kapcsolat() {
   const [error, setError] = useState(null);
   const [cursorVisible, setCursorVisible] = useState(true);
   const [phase, setPhase] = useState(0);
+  const [captchaChecked, setCaptchaChecked] = useState(false);
 
   const { ref: formRef, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
 
@@ -37,6 +38,11 @@ export default function Kapcsolat() {
     e.preventDefault();
     setLoading(true);
     setError(null);
+    if (!captchaChecked) {
+      setError('Kérlek pipáld be, hogy nem vagy robot!');
+      setLoading(false);
+      return;
+    }
 
     const formData = new FormData(e.target);
 
@@ -165,6 +171,17 @@ export default function Kapcsolat() {
                       className="input-field"
                       name="message"
                     ></textarea>
+                  </div>
+
+                  <div className="form-field" style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
+                    <input
+                      type="checkbox"
+                      id="captcha"
+                      checked={captchaChecked}
+                      onChange={e => setCaptchaChecked(e.target.checked)}
+                      style={{ marginRight: '8px' }}
+                    />
+                    <label htmlFor="captcha" style={{ userSelect: 'none', cursor: 'pointer' }}>Nem vagyok robot</label>
                   </div>
 
                   <button className="sendMessage-btn" type="submit" disabled={loading}>
