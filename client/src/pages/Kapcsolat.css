@@ -102,6 +102,7 @@
   box-shadow: 0 8px 24px rgba(0, 119, 204, 0.2);
   font-family: 'Poppins', sans-serif;
   width: 100%;
+  height: 80%;
   max-width: 600px;
   color: #eee;
   background-color: rgba(0, 31, 51, 0.13); /* áttetszőbb */
@@ -195,13 +196,6 @@
   text-align: center;
 }
 
-/* Hibaüzenet */
-.error-msg {
-  color: #ff6b6b;
-  font-weight: 600;
-  margin-top: 10px;
-  text-align: center;
-}
 
 /* Responsive */
 @media screen and (max-width: 900px) {
@@ -270,10 +264,43 @@
 }
 
 .recaptcha-wrapper {
-  margin: 1em 0;
+  position: relative;  
+  height: 78px;
   display: flex;
   justify-content: center;
-  transform: scale(0.85); /* alapból egy picit kisebb */
+  align-items: center;
+  transform: scale(0.85);
   transform-origin: center;
+  transition: transform 0.2s ease;
+  margin-bottom: 1rem; 
 }
+
+/* Hibaüzenet abszolút a captcha alá */
+.error-msg {
+  position: absolute;
+  bottom: 5.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ff4d4f;
+  font-weight: 500;
+  font-size: 0.9rem;
+  white-space: nowrap; 
+  pointer-events: none; 
+  user-select: none;
+  width: max-content;
+  max-width: 90vw;
+  text-align: center;
+  padding: 2px 6px;
+  border-radius: 4px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.error-msg.hidden {
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+
 
