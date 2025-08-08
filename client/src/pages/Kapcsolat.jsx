@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FaPhoneAlt, FaWhatsapp } from 'react-icons/fa';
 import { Typewriter } from 'react-simple-typewriter';
 import { useInView } from 'react-intersection-observer';
+import ReCAPTCHA from 'react-google-recaptcha'; // <-- HOZZÁADVA
 
 export default function Kapcsolat() {
   const [sent, setSent] = useState(false);
@@ -11,6 +12,7 @@ export default function Kapcsolat() {
   const [error, setError] = useState(null);
   const [cursorVisible, setCursorVisible] = useState(true);
   const [phase, setPhase] = useState(0);
+  const [recaptchaToken, setRecaptchaToken] = useState(null); // <-- HOZZÁADVA
 
   const { ref: formRef, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
 
@@ -38,6 +40,12 @@ export default function Kapcsolat() {
     setLoading(true);
     setError(null);
 
+    if (!recaptchaToken) {
+      setError('Kérlek igazold, hogy nem vagy robot.');
+      setLoading(false);
+      return;
+    }
+
     const formData = new FormData(e.target);
 
     try {
@@ -52,6 +60,7 @@ export default function Kapcsolat() {
       if (response.ok) {
         setSent(true);
         e.target.reset();
+        setRecaptchaToken(null); // <-- reset CAPTCHA state
       } else {
         setError(data?.message || 'Hiba történt az üzenet elküldésekor.');
       }
@@ -167,6 +176,15 @@ export default function Kapcsolat() {
                     ></textarea>
                   </div>
 
+                  <div className="recaptcha-wrapper">
+                    <ReCAPTCHA
+                      sitekey="6Ld9iJ4rAAAAAJrOYxkw-WTe_moKWcaHjvahdQlv"
+                      theme="dark"
+                      onChange={(token) => setRecaptchaToken(token)}
+                      onExpired={() => setRecaptchaToken(null)}
+                    />
+                  </div>
+
                   <button className="sendMessage-btn" type="submit" disabled={loading}>
                     {loading ? 'Küldés...' : 'Küldés'}
                   </button>
@@ -209,7 +227,6 @@ export default function Kapcsolat() {
                 </motion.div>
               )}
             </AnimatePresence>
-
           </div>
         </>
       ) : (
