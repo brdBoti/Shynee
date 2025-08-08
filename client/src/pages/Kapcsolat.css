@@ -264,11 +264,16 @@
   .ikonok-section {
     gap: 25px;
   }
+  .recaptcha-wrapper {
+    transform: scale(0.75); /* még kisebbre állítva mobilon */
+  }
 }
 
 .recaptcha-wrapper {
   margin: 1em 0;
   display: flex;
   justify-content: center;
+  transform: scale(0.85); /* alapból egy picit kisebb */
+  transform-origin: center;
 }
 
