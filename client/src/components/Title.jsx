@@ -4,7 +4,7 @@ import './Title.css';
 import shyneetextpng from '../images/shyneetextniceres2.PNG';
 
 const subText = "Autóápolás Mindenhol";
-const typingSpeed = 120;
+const typingSpeed = 80;
 
 export default function Title() {
   const [typedText, setTypedText] = useState('');
