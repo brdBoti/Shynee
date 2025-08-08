@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FaPhoneAlt, FaWhatsapp } from 'react-icons/fa';
 import { Typewriter } from 'react-simple-typewriter';
 import { useInView } from 'react-intersection-observer';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 export default function Kapcsolat() {
   const [sent, setSent] = useState(false);
@@ -12,6 +13,7 @@ export default function Kapcsolat() {
   const [cursorVisible, setCursorVisible] = useState(true);
   const [phase, setPhase] = useState(0);
   const [captchaChecked, setCaptchaChecked] = useState(false);
+  const [recaptchaToken, setRecaptchaToken] = useState(null);
 
   const { ref: formRef, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
 
@@ -38,8 +40,8 @@ export default function Kapcsolat() {
     e.preventDefault();
     setLoading(true);
     setError(null);
-    if (!captchaChecked) {
-      setError('Kérlek pipáld be, hogy nem vagy robot!');
+    if (!recaptchaToken) {
+      setError('Kérlek igazold, hogy nem vagy robot!');
       setLoading(false);
       return;
     }
@@ -173,15 +175,12 @@ export default function Kapcsolat() {
                     ></textarea>
                   </div>
 
-                  <div className="form-field" style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
-                    <input
-                      type="checkbox"
-                      id="captcha"
-                      checked={captchaChecked}
-                      onChange={e => setCaptchaChecked(e.target.checked)}
-                      style={{ marginRight: '8px' }}
+                  <div className="form-field" style={{ marginBottom: '10px' }}>
+                    <ReCAPTCHA
+                      sitekey="YOUR_RECAPTCHA_SITE_KEY"
+                      onChange={token => setRecaptchaToken(token)}
+                      onExpired={() => setRecaptchaToken(null)}
                     />
-                    <label htmlFor="captcha" style={{ userSelect: 'none', cursor: 'pointer' }}>Nem vagyok robot</label>
                   </div>
 
                   <button className="sendMessage-btn" type="submit" disabled={loading}>
