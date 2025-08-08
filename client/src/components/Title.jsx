@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import './Title.css';
 import shyneetextpng from '../images/shyneetextniceres2.PNG';
 
-const subText = "Mobil Autóápolás";
+const subText = "Autóápolás Mindenhol";
 const typingSpeed = 120;
 
 export default function Title() {
