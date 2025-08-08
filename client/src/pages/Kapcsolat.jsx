@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FaPhoneAlt, FaWhatsapp } from 'react-icons/fa';
 import { Typewriter } from 'react-simple-typewriter';
 import { useInView } from 'react-intersection-observer';
-import ReCAPTCHA from 'react-google-recaptcha';
 
 export default function Kapcsolat() {
   const [sent, setSent] = useState(false);
@@ -12,8 +11,6 @@ export default function Kapcsolat() {
   const [error, setError] = useState(null);
   const [cursorVisible, setCursorVisible] = useState(true);
   const [phase, setPhase] = useState(0);
-  const [captchaChecked, setCaptchaChecked] = useState(false);
-  const [recaptchaToken, setRecaptchaToken] = useState(null);
 
   const { ref: formRef, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
 
@@ -40,11 +37,6 @@ export default function Kapcsolat() {
     e.preventDefault();
     setLoading(true);
     setError(null);
-    if (!recaptchaToken) {
-      setError('Kérlek igazold, hogy nem vagy robot!');
-      setLoading(false);
-      return;
-    }
 
     const formData = new FormData(e.target);
 
@@ -173,14 +165,6 @@ export default function Kapcsolat() {
                       className="input-field"
                       name="message"
                     ></textarea>
-                  </div>
-
-                  <div style={{ marginBottom: '10px' }}>
-                    <ReCAPTCHA
-                      sitekey="YOUR_RECAPTCHA_SITE_KEY"
-                      onChange={token => setRecaptchaToken(token)}
-                      onExpired={() => setRecaptchaToken(null)}
-                    />
                   </div>
 
                   <button className="sendMessage-btn" type="submit" disabled={loading}>
