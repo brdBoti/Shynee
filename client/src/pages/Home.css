@@ -10,6 +10,9 @@ body::-webkit-scrollbar {
   /* Chrome, Safari, Edge */
 }
 
+
+
+
 /* — existing styles — */
 .home-container {
   display: flex;
