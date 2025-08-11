@@ -153,29 +153,53 @@ export default function Rólunk() {
           </motion.div>
         </div>
       </section>
-
       <section className="content-section">
-        {
-          imageData.map((item, index) => (
-            <div
+        {imageData.map((item, index) => {
+          const { ref, inView } = useInView({
+            threshold: 0.2, // 20%-a látszódjon, akkor indul
+            triggerOnce: true // csak egyszer fusson le
+          });
+
+          return (
+            <motion.div
               key={index}
+              ref={ref}
               className={`image-text-pair ${index % 2 === 0 ? "left-image" : "right-image"}`}
-            > 
-              <img
+              initial={{ opacity: 0, y: 50 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              <motion.img
                 src={item.image}
                 alt={item.image === shynee ? "shyneelogo" : `image-${index}`}
                 className={`side-image ${item.image === shynee ? "shynee-logo" : ""}`}
+                initial={{ opacity: 0 }}
+                animate={inView ? { opacity: 1 } : {}}
+                transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
               />
-              <p className="image-caption">{item.text}</p>
-            </div>
-          ))
-        }
-
+              <motion.p
+                className="image-caption"
+                initial={{ opacity: 0, x: index % 2 === 0 ? 50 : -50 }}
+                animate={inView ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+                onMouseMove={(e) => {
+                  const rect = e.currentTarget.getBoundingClientRect();
+                  const x = e.clientX - rect.left;
+                  const y = e.clientY - rect.top;
+                  e.currentTarget.style.setProperty("--x", `${x}px`);
+                  e.currentTarget.style.setProperty("--y", `${y}px`);
+                }}
+              >
+                {item.text}
+              </motion.p>
+            </motion.div>
+          );
+        })}
       </section>
+
       <footer className="page-motto">
         "Shynee - Mindenhol"
       </footer>
-      
     </div>
   );
 }

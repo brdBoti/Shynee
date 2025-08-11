@@ -17,6 +17,7 @@ export default function RendelésKülső() {
     subtitle: "Külső tisztítás alapcsomag",
     features: ["Habos előmosás", "Kézi mosás", "Felni tisztítás", "Szárítás"],
     buttonText: "Érdekel",
+    page: "rendeleskulsobelso"
   },
   {
     color: "gold",
@@ -30,6 +31,7 @@ export default function RendelésKülső() {
       "Szárítás prémium anyagokkal"
     ],
     buttonText: "Érdekel",
+    page: "rendeleskulso"
   },
 ];
 

@@ -178,7 +178,9 @@
   transform: scale(1.03);
 }
 
-
+.side-image.shynee-logo:hover {
+  transform: scale(1.03);
+}
 
 .side-image:not(.shynee-logo) {
   width: 45%;
@@ -197,12 +199,26 @@
 .image-caption {
   font-size: 1.3rem;
   line-height: 1.6;
-  color: #ffffff;
+  color: #ffffff; /* alapból fehér */
   max-width: 500px;
   font-family: 'Inter', sans-serif;
   font-weight: 700;
   animation: fadeInUp 1.6s ease forwards;
+  background: radial-gradient(circle 50px at var(--x, 0) var(--y, 0), #3498db 100%, transparent 100%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgb(255, 255, 255); /* itt fehér, ne legyen transparent */
+  transition: background-position 0.4s ease;
 }
+
+.image-caption:hover {
+  background-position: 0 0;
+  -webkit-text-fill-color: rgb(255, 255, 255); /* hoverkor is maradjon fehér */
+  /* ha szeretnéd, adhatsz még árnyékot, hogy a kék effekt jobban látszódjon */
+}
+
+
 
 @keyframes bounce {
 
@@ -474,8 +490,7 @@
     padding: 0 0.5rem;
   }
 
-  .page-motto{
+  .page-motto {
     font-size: 1.3rem;
   }
 }
-

@@ -122,12 +122,12 @@ export default function Kapcsolat() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 1.2 }}
             >
-              <a href="tel:+36201234567" className="ikon-link" aria-label="Telefon">
+              <a href="tel:+36307734189" className="ikon-link" aria-label="Telefon">
                 <FaPhoneAlt />
                 <span className="ikon-title">Telefon</span>
               </a>
               <a
-                href="https://wa.me/36201234567"
+                href="https://wa.me/36307734189"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="ikon-link"

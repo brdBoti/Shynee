@@ -24,6 +24,7 @@ export default function RendelésKülsőBelső() {
                 "Ablaktisztítás",
             ],
             buttonText: "Érdekel",
+            page: "rendeleskulsobelso"
         },
         {
             color: "gold",
@@ -39,6 +40,7 @@ export default function RendelésKülsőBelső() {
                 "Bőrápolás"
             ],
             buttonText: "Érdekel",
+            page: "rendeleskulsobelso"
         },
     ];
 

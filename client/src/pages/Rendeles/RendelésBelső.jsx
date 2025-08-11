@@ -23,6 +23,7 @@ export default function RendelésBelső() {
         "Teljes törődés."
       ],
       buttonText: "Érdekel",
+      page: "rendelesbelso"
     },
     {
       color: "gold",
@@ -37,6 +38,7 @@ export default function RendelésBelső() {
         "Szagtalanítás és légfrissítés"
       ],
       buttonText: "Érdekel",
+      page: "rendelesbelso"
     },
   ];
 
