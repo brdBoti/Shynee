@@ -3,7 +3,6 @@ import './Card.css';
 
 export default function Card({ color = "silver", title, price, subtitle, features = [], buttonText, page }) {
 
-  // Page alapján állítjuk be a linket
   let linkTo = 'https://spotless.salonic.hu/';
 
   if (page === 'rendelesbelso') {
