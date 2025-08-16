@@ -34,8 +34,8 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const currentY = window.scrollY;
-      if (currentY === 0) {
-        setHidden(false); // Always show at the top
+      if (currentY <= 2) {
+        setHidden(false); // Always show at the top (or near top, for mobile bounce)
       } else if (currentY > lastScrollY.current) {
         setHidden(true); // Scrolling down
       } else if (currentY < lastScrollY.current) {
