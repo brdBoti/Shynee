@@ -29,19 +29,20 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [hidden, setHidden] = useState(false);
   const location = useLocation();
-  let lastScrollY = window.scrollY;
-
-  const handleScroll = () => {
-    const currentY = window.scrollY;
-    if (currentY > lastScrollY && currentY > 80) {
-      setHidden(true);
-    } else {
-      setHidden(false);
-    }
-    lastScrollY = currentY;
-  };
+  const lastScrollY = React.useRef(window.scrollY);
 
   useEffect(() => {
+    const handleScroll = () => {
+      const currentY = window.scrollY;
+      if (currentY > lastScrollY.current) {
+        // Scrolling down
+        setHidden(true);
+      } else if (currentY < lastScrollY.current) {
+        // Scrolling up
+        setHidden(false);
+      }
+      lastScrollY.current = currentY;
+    };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);

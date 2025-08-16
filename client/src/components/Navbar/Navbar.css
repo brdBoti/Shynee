@@ -11,18 +11,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Faster+One&display=swap');
 
 .navbar {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.3rem 0;
-  background-color: transparent !important;
-  -webkit-backdrop-filter: none !important;
-  backdrop-filter: none !important;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  padding: 1.6rem 0; /* even taller */
+  background: rgba(30, 34, 40, 0.4); /* subtle dark, not blue */
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease, opacity 0.3s ease, background 0.3s ease;
 }
 
 .navbar__logo {
@@ -185,6 +186,9 @@
 }
 
 @media (max-width: 768px) {
+  .navbar {
+    padding: 1.7rem 0; /* 7% taller on mobile */
+  }
   .navbar__nav {
     position: fixed;
     top: 0;
@@ -303,5 +307,10 @@
   height: 100vh;
   background: transparent;
   z-index: 9990;
+}
+
+.navbar--hidden {
+  transform: translateY(-100%);
+  box-shadow: none;
 }
 

@@ -7,6 +7,11 @@ import Footer from './Footer';
 export default function Layout() {
   const { pathname } = useLocation();
 
+  // Scroll to top on route change
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   const pageClass =
     pathname === '/rendeles' ? 'page-rendeles' :
     pathname === '/rolunk' ? 'page-rolunk' :
