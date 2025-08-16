@@ -1,16 +1,16 @@
-/* Navbar.css */
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Faster+One&display=swap');
+  /* Navbar.css */
+  @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700;900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Faster+One&display=swap');
 
-.navbar {
+ .navbar {
   position: fixed;
   top: 0;
   left: 0;
@@ -19,219 +19,144 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.6rem 0; /* even taller */
-  background: rgba(30, 34, 40, 0.4); /* subtle dark, not blue */
-  -webkit-backdrop-filter: blur(8px);
+  padding: 1.6rem 0;
+  background: rgba(30, 34, 40, 0.4);
   backdrop-filter: blur(8px);
-  transition: transform 0.3s ease, opacity 0.3s ease, background 0.3s ease;
+  -webkit-backdrop-filter: blur(8px);
+  transition: 
+    transform 0.3s ease, 
+    opacity 0.3s ease, 
+    background 0.5s ease, 
+    backdrop-filter 0.5s ease; /* smooth váltás blur-re */
 }
 
-.navbar__logo {
-  position: absolute;
-  left: -10px;
-  top: -16px;
-  transition: all 0.4s ease-in-out;
-  /* Sima átmenet az összes tulajdonságra */
-}
-
-.navbar__logo img {
-  width: 108px;
-  height: auto;
-  animation: logoAppear 1.8s ease forwards;
-  transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
-  /* Átmenet a skálázáshoz és glow-hoz */
-}
-
-.navbar__logo:hover {
-  transform: scale(1.05);
-  /* Enyhe nagyítás hover közben */
-  filter: drop-shadow(0 0 8px rgba(0, 170, 255, 0.5));
-  /* SHYNEE-kék glow effekt */
+.navbar--clear {
+  background: transparent;
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
 }
 
 
-@keyframes logoAppear {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
+  .navbar__logo {
+    position: absolute;
+    left: -10px;
+    top: -16px;
+    transition: all 0.4s ease-in-out;
+    /* Sima átmenet az összes tulajdonságra */
   }
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.navbar__nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 3rem;
-}
-
-.navbar__link {
-  position: relative;
-  color: #ffffff;
-  font-size: 1.25rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  font-family: 'Poppins', sans-serif;
-
-  text-decoration: none;
-  padding: 0.25rem 0;
-  text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
-  transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-.navbar__link::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #00aaff, #007acc, #005f99);
-  /* SHYNEE-kék gradiens */
-  transition: width 0.3s ease;
-}
-
-.navbar__link:hover,
-.navbar__link--active {
-  color: #00aaff;
-  /* SHYNEE fő szín */
-}
-
-.navbar__link:hover::after,
-.navbar__link--active::after {
-  width: 100%;
-}
-
-.logo-shine-wrapper {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  top: 30px;
-  left: 30px;
-  border-radius: 50%;
-  overflow: hidden;
-  pointer-events: none;
-  z-index: 2;
-}
-
-.logo-shine-wrapper::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -60%;
-  width: 40%;
-  height: 100%;
-  background: linear-gradient(120deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 0.6) 50%,
-      rgba(255, 255, 255, 0) 100%);
-  transform: skewX(-20deg);
-  animation: shine 1s ease-in-out 1.9s forwards;
-  border-radius: 50%;
-}
-
-@keyframes shine {
-  0% {
-    left: -60%;
+  .navbar__logo img {
+    width: 108px;
+    height: auto;
+    animation: logoAppear 1.8s ease forwards;
+    transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
+    /* Átmenet a skálázáshoz és glow-hoz */
   }
 
-  100% {
-    left: 120%;
-  }
-}
-
-.navbar__toggle {
-  display: none;
-  position: absolute;
-  top: 20px;
-  right: 1.5rem;
-  width: 28px;
-  height: 22px;
-  border: none;
-  background: none;
-  cursor: pointer;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1100;
-  padding: 0;
-}
-
-.navbar__toggle span {
-  display: block;
-  width: 100%;
-  height: 3px;
-  background: #00aaff;
-  /* kék toggle ikon */
-  border-radius: 2px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-}
-
-.navbar__toggle--open span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-.navbar__toggle--open span:nth-child(2) {
-  opacity: 0;
-}
-
-.navbar__toggle--open span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
-}
-
-@media (max-width: 768px) {
-  .navbar {
-    padding: 1.7rem 0; /* 7% taller on mobile */
-  }
-  .navbar__nav {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 180px;
-    height: 100vh;
-    flex-direction: column;
-    gap: 2rem;
-    padding-top: 0;
-    transition: right 0.4s ease;
-    overflow-y: auto;
-    background-color: rgba(10, 20, 30, 0.75);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    z-index: 9998;
-    transform: translateY(-20px);
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.4s ease;
+  .navbar__logo:hover {
+    transform: scale(1.05);
+    /* Enyhe nagyítás hover közben */
+    filter: drop-shadow(0 0 8px rgba(0, 170, 255, 0.5));
+    /* SHYNEE-kék glow effekt */
   }
 
-  @supports (-webkit-touch-callout: none) {
-    .navbar__nav {
-      backdrop-filter: none !important;
-      -webkit-backdrop-filter: none !important;
-      background-color: #0a141e !important;
+
+  @keyframes logoAppear {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 
-  .navbar__logo {
-    top: -14px;
-  }
-
-  .navbar__nav--open {
-    right: 0;
-    transform: translateY(0);
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  /* Animált hamburger menü megjelenés */
-  .navbar__toggle {
+  .navbar__nav {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .navbar__link {
+    position: relative;
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    font-family: 'Poppins', sans-serif;
+
+    text-decoration: none;
+    padding: 0.25rem 0;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+  }
+
+  .navbar__link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #00aaff, #007acc, #005f99);
+    /* SHYNEE-kék gradiens */
+    transition: width 0.3s ease;
+  }
+
+  .navbar__link:hover,
+  .navbar__link--active {
+    color: #00aaff;
+    /* SHYNEE fő szín */
+  }
+
+  .navbar__link:hover::after,
+  .navbar__link--active::after {
+    width: 100%;
+  }
+
+  .logo-shine-wrapper {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 30px;
+    left: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .logo-shine-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -60%;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(120deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.6) 50%,
+        rgba(255, 255, 255, 0) 100%);
+    transform: skewX(-20deg);
+    animation: shine 1s ease-in-out 1.9s forwards;
+    border-radius: 50%;
+  }
+
+  @keyframes shine {
+    0% {
+      left: -60%;
+    }
+
+    100% {
+      left: 120%;
+    }
+  }
+
+  .navbar__toggle {
+    display: none;
     position: absolute;
     top: 20px;
     right: 1.5rem;
@@ -243,32 +168,16 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    z-index: 10000;
+    z-index: 1100;
     padding: 0;
-    opacity: 0;
-    transform: translateY(-15px);
-    animation: toggleAppear 0.9s ease forwards 0.2s;
-  }
-
-  @keyframes toggleAppear {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .logo-shine-wrapper {
-    top: 20px;
-    left: 18px;
-    width: 45px;
-    height: 45px;
   }
 
   .navbar__toggle span {
     display: block;
     width: 100%;
-    height: 4px;
+    height: 3px;
     background: #00aaff;
+    /* kék toggle ikon */
     border-radius: 2px;
     transition: transform 0.3s ease, opacity 0.3s ease;
     backface-visibility: hidden;
@@ -287,30 +196,132 @@
     transform: rotate(-45deg) translate(5px, -5px);
   }
 
-  .navbar__logo img {
-    width: 85px;
-    transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 1.7rem 0; /* 7% taller on mobile */
+    }
+    .navbar__nav {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 180px;
+      height: 100vh;
+      flex-direction: column;
+      gap: 2rem;
+      padding-top: 0;
+      transition: right 0.4s ease;
+      overflow-y: auto;
+      background-color: rgba(10, 20, 30, 0.75);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 9998;
+      transform: translateY(-20px);
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.4s ease;
+    }
+
+    @supports (-webkit-touch-callout: none) {
+      .navbar__nav {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        background-color: #0a141e !important;
+      }
+    }
+
+    .navbar__logo {
+      top: -14px;
+    }
+
+    .navbar__nav--open {
+      right: 0;
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* Animált hamburger menü megjelenés */
+    .navbar__toggle {
+      display: flex;
+      position: absolute;
+      top: 20px;
+      right: 1.5rem;
+      width: 28px;
+      height: 22px;
+      border: none;
+      background: none;
+      cursor: pointer;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10000;
+      padding: 0;
+      opacity: 0;
+      transform: translateY(-15px);
+      animation: toggleAppear 0.9s ease forwards 0.2s;
+    }
+
+    @keyframes toggleAppear {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .logo-shine-wrapper {
+      top: 20px;
+      left: 18px;
+      width: 45px;
+      height: 45px;
+    }
+
+    .navbar__toggle span {
+      display: block;
+      width: 100%;
+      height: 4px;
+      background: #00aaff;
+      border-radius: 2px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+
+    .navbar__toggle--open span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .navbar__toggle--open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .navbar__toggle--open span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .navbar__logo img {
+      width: 85px;
+      transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
+    }
+
+    .navbar__logo:hover {
+      transform: scale(1.05);
+      filter: drop-shadow(0 0 8px rgba(0, 170, 255, 0.5));
+    }
   }
 
-  .navbar__logo:hover {
-    transform: scale(1.05);
-    filter: drop-shadow(0 0 8px rgba(0, 170, 255, 0.5));
+
+  .navbar__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100vw - 180px);
+    height: 100vh;
+    background: transparent;
+    z-index: 9990;
   }
-}
 
-
-.navbar__overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: calc(100vw - 180px);
-  height: 100vh;
-  background: transparent;
-  z-index: 9990;
-}
-
-.navbar--hidden {
-  transform: translateY(-100%);
-  box-shadow: none;
-}
+  .navbar--hidden {
+    transform: translateY(-100%);
+    box-shadow: none;
+  }
 

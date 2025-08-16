@@ -28,28 +28,36 @@ const linkVariants = {
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [hidden, setHidden] = useState(false);
+  const [atTop, setAtTop] = useState(true); // új state
   const location = useLocation();
   const lastScrollY = React.useRef(window.scrollY);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentY = window.scrollY;
+
       if (currentY <= 2) {
-        setHidden(false); // Always show at the top (or near top, for mobile bounce)
-      } else if (currentY > lastScrollY.current) {
-        setHidden(true); // Scrolling down
-      } else if (currentY < lastScrollY.current) {
-        setHidden(false); // Scrolling up
+        setHidden(false);
+        setAtTop(true); // tetején vagyunk
+      } else {
+        setAtTop(false);
+        if (currentY > lastScrollY.current) {
+          setHidden(true); // lefelé görgetés
+        } else if (currentY < lastScrollY.current) {
+          setHidden(false); // felfelé görgetés
+        }
       }
+
       lastScrollY.current = currentY;
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <>
-      <header className={`navbar ${hidden ? 'navbar--hidden' : ''}`}>
+      <header className={`navbar ${hidden ? 'navbar--hidden' : ''} ${atTop ? 'navbar--clear' : ''}`}>
         <Link to="/" className="navbar__logo">
           <span className="logo-shine-wrapper" />
           <img src={logo} alt="Logo" />
@@ -67,8 +75,7 @@ export default function Navbar() {
             >
               <Link
                 to={path}
-                className={`navbar__link ${location.pathname === path ? 'navbar__link--active' : ''
-                  }`}
+                className={`navbar__link ${location.pathname === path ? 'navbar__link--active' : ''}`}
                 onClick={() => setMenuOpen(false)}
               >
                 {label}
