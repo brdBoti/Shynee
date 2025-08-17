@@ -34,6 +34,8 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
+      // Prevent hiding when menu is open
+      if (menuOpen) return;
       const currentY = window.scrollY;
 
       if (currentY <= 2) {
@@ -53,7 +55,7 @@ export default function Navbar() {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [menuOpen]);
 
   return (
     <>
