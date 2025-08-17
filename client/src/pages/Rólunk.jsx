@@ -25,8 +25,8 @@ export default function Rólunk() {
       image: shynee,
       text: `A Shynee 2025-ben alakult Budapesten azzal a céllal, hogy új szintre emelje az autóápolás élményét: kompromisszumok nélkül, házhoz jövünk – akár otthonodba, akár munkahelyedhez – és prémium minőségben tisztítjuk meg autódat kívül-belül.`,
     },
-    { image: kep2, text: "A nevünk nem véletlen gigazsák burdáék, mikor a város fényei halványan pislákolnak, a szél susogva meséli el a régi történeteket, amiket csak a lombok hallgatnak meg. A macskák csendben surrannak az árnyékok között, míg a csillagok lassan kialszanak az égen." },
-    { image: kep3, text: "Harmadik képszöveg, amit külön állíthatsz. Egy apró kávézó sarkában, ahol az illatok keverednek a nyüzsgő utcák zajával, egy öreg írógép kattogása tör át a csendet. " },
+    { image: kep2, text: "Text" },
+    { image: kep3, text: "Text" },
   ];
 
   useEffect(() => {
