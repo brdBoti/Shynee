@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram } from 'react-icons/fa';
+import { SiTiktok } from 'react-icons/si';
 import { Link } from 'react-router-dom';
 import './Footer.css';
 import simplepayLogo from '../images/logos/simplepay.svg';
@@ -36,9 +37,9 @@ export default function Footer() {
         <div className="footer-section right">
           <h4>Kövess minket</h4>
           <div className="social-icons">
-            <a href="https://facebook.com" target="_blank" rel="noreferrer"><FaFacebookF /></a>
-            <a href="https://instagram.com" target="_blank" rel="noreferrer"><FaInstagram /></a>
-            <a href="https://twitter.com" target="_blank" rel="noreferrer"><FaTwitter /></a>
+            <a href="https://www.instagram.com/shyneebp/" target="_blank" rel="noreferrer" className="icon--instagram"><FaInstagram /></a>
+            <a href="https://www.facebook.com/profile.php?id=61579099461353" target="_blank" rel="noreferrer"><FaFacebookF /></a>
+            <a href="https://tiktok.com" target="_blank" rel="noreferrer"><SiTiktok /></a>
           </div>
         </div>
 

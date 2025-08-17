@@ -152,6 +152,14 @@ footer p.copyright {
   padding-top: 1rem;
 }
 
+.footer-section.right .social-icons .fa-instagram {
+  font-size: 1.3rem;
+}
+
+.icon--instagram svg {
+  transform: scale(1.23);
+}
+
 @media (max-width: 768px) {
   .footer {
     padding: 2rem 1rem;
