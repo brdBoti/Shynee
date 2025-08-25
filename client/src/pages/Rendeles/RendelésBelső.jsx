@@ -16,11 +16,11 @@ export default function RendelésBelső() {
       price: "10.000 Ft",
       subtitle: "Belső tisztítás alapcsomag",
       features: [
-        "Belső porszívózás",
-        "Műszerfal és ajtók takarítása",
-        "Szőnyegek tisztítása",
-        "Ablaktisztítás belülről",
-        "Teljes törődés."
+        "porszívózás",
+        "szőnyeg tisztítás",
+        "utastér tisztítás",
+        "ablaktisztítás",
+        "kérhető extra: ülés kárpit tisztítás"
       ],
       buttonText: "Érdekel",
       page: "rendelesbelso"
@@ -29,13 +29,15 @@ export default function RendelésBelső() {
       color: "gold",
       title: "Prémium",
       price: "24.999 Ft",
-      subtitle: "Teljes belső tisztítás",
+      subtitle: "Teljes körű belső tisztítás",
       features: [
-        "Az Alap csomag +",
-        "Szőnyegtisztítás",
-        "Műanyag- és bőrápolás",
-        "Ablaktisztítás belülről",
-        "Szagtalanítás és légfrissítés"
+        "porszívózás",
+        "vegyszeres szőnyeg tisztítás",
+        "utastér tisztítás",
+        "csomagtér vegyszeres tisztítás",
+        "műanyag és bőr ápolás",
+        "ablaktisztítás",
+        "kérhető extra: ülés kárpit tisztítás"
       ],
       buttonText: "Érdekel",
       page: "rendelesbelso"

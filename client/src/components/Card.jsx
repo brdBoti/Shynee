@@ -15,8 +15,20 @@ export default function Card({ color = "silver", title, price, subtitle, feature
           </button>
         </div>
         <div className="flip-card-back">
-          <h1>Back of Card</h1>
-          <p>More info</p>
+          {subtitle && <p className="subtitle">{subtitle}</p>}
+          <div className="back-content">
+            {features && features.length > 0 && (
+              <ul className="features-list">
+                {features.map((feature, index) => {
+                  const text = typeof feature === 'string' ? feature.trim().toLowerCase() : '';
+                  const isExtra = text.includes('extra');
+                  return (
+                    <li key={index} className={isExtra ? 'is-extra' : ''}>{feature}</li>
+                  );
+                })}
+              </ul>
+            )}
+          </div>
           <button className="flip-btn" onClick={() => setFlipped(false)}>
             Show Front
           </button>

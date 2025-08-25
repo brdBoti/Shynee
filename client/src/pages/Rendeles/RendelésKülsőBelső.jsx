@@ -12,16 +12,24 @@ export default function RendelésKülsőBelső() {
     const cards = [
         {
             color: "silver",
-            title: "Basic",
+            title: "Alap",
             price: "30.000 Ft",
             subtitle: "Külső és belső tisztítás alapcsomag",
             features: [
-                "Habos előmosás",
-                "Kézi mosás",
-                "Felni tisztítás",
-                "Szárítás",
-                "Belső porszívózás",
-                "Ablaktisztítás",
+                // Külső (Alap)
+                "rovaroldás",
+                "aktív hab",
+                "samponos kézi mosás",
+                "falcok tisztítása",
+                "viasz",
+                "szárítás",
+                // Belső (Alap)
+                "porszívózás",
+                "szőnyeg tisztítás",
+                "utastér tisztítás",
+                "ablaktisztítás",
+                // Extra minden csomaghoz
+                "kérhető extra: ülés kárpit tisztítás"
             ],
             buttonText: "Érdekel",
             page: "rendeleskulsobelso"
@@ -32,12 +40,27 @@ export default function RendelésKülsőBelső() {
             price: "50.000 Ft",
             subtitle: "Teljes körű külső és belső tisztítás",
             features: [
-                "A Basic csomag tartalma",
-                "Műanyagápolás",
-                "Kárpittisztítás",
-                "Belső műanyag és műszerfal ápolás",
-                "Extra felületkezelés",
-                "Bőrápolás"
+                // Külső (Prémium)
+                "felni tisztítás",
+                "kátrányoldás",
+                "rovaroldás",
+                "aktív hab",
+                "samponos kézi mosás",
+                "falcok tisztítása",
+                "gyors kerámia",
+                "viasz",
+                "szárítás",
+                "műanyagápolás",
+                "gumiápolás",
+                // Belső (Prémium)
+                "porszívózás",
+                "vegyszeres szőnyeg tisztítás",
+                "utastér tisztítás",
+                "csomagtér vegyszeres tisztítás",
+                "műanyag és bőr ápolás",
+                "ablaktisztítás",
+                // Extra minden csomaghoz
+                "kérhető extra: ülés kárpit tisztítás"
             ],
             buttonText: "Érdekel",
             page: "rendeleskulsobelso"

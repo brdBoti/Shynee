@@ -5,6 +5,12 @@
   display: inline-block;
   margin: 1rem;
   vertical-align: top;
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.flip-card-container:hover {
+  transform: translateY(-4px);
+  filter: drop-shadow(0 6px 16px rgba(0, 170, 255, 0.15));
 }
 
 .flip-card.flipped {
@@ -17,47 +23,141 @@
   position: relative;
   transition: transform 1500ms;
   transform-style: preserve-3d;
+  will-change: transform;
 }
 
 .flip-card-front,
 .flip-card-back {
   height: 100%;
   width: 100%;
-  border-radius: 2rem;
-  box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+  border-radius: 1.25rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255,255,255,0.04);
   position: absolute;
   backface-visibility: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between; /* keep header at top, button at bottom */
+  align-items: stretch;
+  box-sizing: border-box; /* prevent padding from changing overall size */
+  padding: 1rem 1rem 0.75rem;
+  background: rgba(30, 34, 40, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .flip-card-front {
-  background: #222;
-  color: #fff;
+  color: #eaf6ff;
 }
 
 .flip-card-back {
-  background-color: #3a3a3a;
-  color: #fff;
+  color: #eaf6ff;
   transform: rotateY(180deg);
-  gap: 2rem;
+  gap: 0.75rem;
 }
 
 .flip-btn {
-  margin-top: 1rem;
+  margin-top: 0.75rem;
   padding: 0.6rem 1.2rem;
-  border-radius: 1rem;
-  border: none;
-  background: #444;
-  color: #fff;
+  border-radius: 0.9rem;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: linear-gradient(135deg, #00aaff, #007acc);
+  color: #ffffff;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s;
+  letter-spacing: 0.02em;
+  box-shadow: 0 6px 14px rgba(0, 170, 255, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
 }
 
 .flip-btn:hover {
-  background: #666;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(0, 170, 255, 0.35);
+  filter: brightness(1.05);
+}
+
+/* Top area content (e.g., title/pricing on front) */
+.title {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 800;
+  text-align: center;
+  color: #00aaff;
+  letter-spacing: 0.06em;
+  text-shadow: 0 0 6px rgba(0, 170, 255, 0.15);
+}
+
+.pricing {
+  text-align: center;
+  font-size: 1rem;
+  margin: 0.5rem auto 0;
+  padding: 0.25rem 0.75rem;
+  color: #001019;
+  background: linear-gradient(135deg, #e1f6ff, #bfe9ff);
+  border-radius: 999px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.6), 0 1px 6px rgba(0,0,0,0.25);
+  width: fit-content;
+}
+
+/* Back content layout: make list scroll if long so button stays visible */
+.subtitle {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  font-size: 0.95rem;
+  color: #d9f2ff;
+  letter-spacing: 0.02em;
+}
+
+.back-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* center list vertically under subtitle */
+  text-align: left;
+  flex: 1 1 auto;
+  min-height: 0; /* allow child overflow auto to work in flex */
+}
+
+.features-list {
+  list-style: none;
+  margin: 0;
+  padding: 0.1rem 0.1rem 0.1rem 0.5rem;
+  max-height: 100%;
+  overflow: hidden; /* avoid scrollbar by default */
+  font-size: 0.85rem; /* smaller text to fit */
+  line-height: 1.15;
+  color: #f2fbff;
+  font-family: 'Poppins', 'DM Sans', 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  text-transform: capitalize; /* capitalize first letter of each item */
+}
+
+.features-list li {
+  margin: 0.12rem 0;
+  padding-left: 1rem; /* space for the check icon */
+  position: relative;
+  text-shadow: 0 0 1px rgba(0,0,0,0.25);
+  color: #eaf6ff; /* base shade */
+}
+
+.features-list li::before {
+  content: '\2713'; /* check mark */
+  position: absolute;
+  left: 0;
+  top: 0.1rem;
+  font-size: 0.8rem;
+  line-height: 1;
+  color: #00aaff;
+  text-shadow: 0 0 6px rgba(0, 170, 255, 0.3);
+}
+
+/* Extra items use a plus icon with the same style */
+.features-list li.is-extra::before {
+  content: '+'; /* simple plus sign */
+}
+
+/* Zebra striping for better readability */
+.features-list li:nth-child(even) {
+  color: #cfe9ff; /* clearer but still subtle difference */
 }

@@ -2,7 +2,8 @@ html, body, #root {
   width: 100%;
   min-height: 100vh;
   overflow-x: hidden;    
-  overflow-y: auto;    
+  overflow-y: scroll; /* reserve scrollbar to prevent layout shift */   
+  scrollbar-gutter: stable both-edges; /* modern browsers: keep gutter */
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;

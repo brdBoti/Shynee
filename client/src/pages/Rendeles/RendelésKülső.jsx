@@ -15,7 +15,15 @@ export default function RendelésKülső() {
     title: "Alap",
     price: "1.000 Ft",
     subtitle: "Külső tisztítás alapcsomag",
-    features: ["Habos előmosás", "Kézi mosás", "Felni tisztítás", "Szárítás"],
+    features: [
+      "rovaroldás",
+      "aktív hab",
+      "samponos kézi mosás",
+      "falcok tisztítása",
+      "viasz",
+      "szárítás",
+      "kérhető extra: ülés kárpit tisztítás"
+    ],
     buttonText: "Érdekel",
     page: "rendeleskulsobelso"
   },
@@ -23,12 +31,20 @@ export default function RendelésKülső() {
     color: "gold",
     title: "Prémium",
     price: "2.500 Ft",
-    subtitle: "Teljes külső tisztítás",
+    subtitle: "Teljes körű külső tisztítás",
     features: [
-      "Az Alap csomag tartalma",
-      "Kézi viaszozás",
-      "Mélytisztító samponozás",
-      "Szárítás prémium anyagokkal"
+      "felni tisztítás",
+      "kátrányoldás",
+      "rovaroldás",
+      "aktív hab",
+      "samponos kézi mosás",
+      "falcok tisztítása",
+      "gyors kerámia",
+      "viasz",
+      "szárítás",
+      "műanyagápolás",
+      "gumiápolás",
+      "kérhető extra: ülés kárpit tisztítás"
     ],
     buttonText: "Érdekel",
     page: "rendeleskulso"
