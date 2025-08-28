@@ -37,8 +37,8 @@ export default function Footer() {
         <div className="footer-section right">
           <h4>Kövess minket</h4>
           <div className="social-icons">
-            <a href="https://www.instagram.com/shyneebp/" target="_blank" rel="noreferrer" className="icon--instagram"><FaInstagram /></a>
-            <a href="https://www.facebook.com/profile.php?id=61579099461353" target="_blank" rel="noreferrer"><FaFacebookF /></a>
+            <a href="https://www.instagram.com/shynee.hu/" target="_blank" rel="noreferrer" className="icon--instagram"><FaInstagram /></a>
+            <a href="https://www.facebook.com/profile.php?id=61579712527671" target="_blank" rel="noreferrer"><FaFacebookF /></a>
             <a href="https://tiktok.com" target="_blank" rel="noreferrer"><SiTiktok /></a>
           </div>
         </div>
