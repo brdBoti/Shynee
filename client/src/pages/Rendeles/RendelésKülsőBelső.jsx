@@ -12,9 +12,9 @@ export default function RendelésKülsőBelső() {
     const cards = [
         {
             color: "silver",
-            title: "Alap",
+            title: "Standard",
             price: "30.000 Ft",
-            subtitle: "Külső és belső tisztítás alapcsomag",
+            subtitle: "Standard külső és belső tisztítás",
             features: [
                 // Külső (Alap)
                 "rovaroldás",
@@ -28,17 +28,18 @@ export default function RendelésKülsőBelső() {
                 "szőnyeg tisztítás",
                 "utastér tisztítás",
                 "ablaktisztítás",
-                // Extra minden csomaghoz
-                "kérhető extra: ülés kárpit tisztítás"
+                "kérhető extra: Gyors kerámia bevonat"
             ],
             buttonText: "Érdekel",
-            page: "rendeleskulsobelso"
+            page: "rendeleskulsobelso",
+            link: "https://shynee.salonic.hu/selectDate/?employeeId=27333&placeId=12457&serviceId=404517&startDate=1756458900&back=%2FselectEmployee%2F%3FplaceId%3D12457%26serviceId%3D404517",
+            ceramicLink: "https://shynee.salonic.hu/selectDate/?employeeId=27333&placeId=12457&serviceId=408371&startDate=1756458900&back=%2FselectEmployee%2F%3FplaceId%3D12457%26serviceId%3D408371"
         },
         {
             color: "gold",
             title: "Prémium",
             price: "50.000 Ft",
-            subtitle: "Teljes körű külső és belső tisztítás",
+            subtitle: "Prémium külső és belső tisztítás",
             features: [
                 // Külső (Prémium)
                 "felni tisztítás",
@@ -56,14 +57,16 @@ export default function RendelésKülsőBelső() {
                 "porszívózás",
                 "vegyszeres szőnyeg tisztítás",
                 "utastér tisztítás",
-                "csomagtér vegyszeres tisztítás",
+                "vegyszeres ülés kárpit tisztítás",
+                "vegyszeres csomagtér tisztítás",
                 "műanyag és bőr ápolás",
                 "ablaktisztítás",
-                // Extra minden csomaghoz
-                "kérhető extra: ülés kárpit tisztítás"
+                "kérhető extra: Gyors kerámia bevonat"
             ],
             buttonText: "Érdekel",
-            page: "rendeleskulsobelso"
+            page: "rendeleskulsobelso",
+            link: "https://shynee.salonic.hu/selectDate/?employeeId=27333&placeId=12457&serviceId=408365&startDate=1756458900&back=%2FselectEmployee%2F%3FplaceId%3D12457%26serviceId%3D408365",
+            ceramicLink: "https://shynee.salonic.hu/selectDate/?employeeId=27333&placeId=12457&serviceId=408367&startDate=1756458900&back=%2FselectEmployee%2F%3FplaceId%3D12457%26serviceId%3D408367"
         },
     ];
 

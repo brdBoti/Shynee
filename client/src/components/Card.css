@@ -161,3 +161,60 @@
 .features-list li:nth-child(even) {
   color: #cfe9ff; /* clearer but still subtle difference */
 }
+
+/* Back arrow in top-left */
+.back-arrow {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(0, 20, 30, 0.35);
+  color: #eaf6ff;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.back-arrow:hover {
+  filter: brightness(1.1);
+}
+
+/* Link-style CTA buttons */
+.link-btn {
+  display: inline-block;
+  text-align: center;
+  margin-top: 0.75rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.9rem;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: linear-gradient(135deg, #00aaff, #007acc);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  box-shadow: 0 6px 14px rgba(0, 170, 255, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.link-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(0, 170, 255, 0.35);
+  filter: brightness(1.05);
+}
+
+.link-btn.secondary {
+  background: linear-gradient(135deg, #00d4ff, #00aaff);
+}
+
+/* Dual button layout */
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Card.css';
 
-export default function Card({ color = "silver", title, price, subtitle, features = [], buttonText, page }) {
+export default function Card({ color = "silver", title, price, subtitle, features = [], buttonText, page, link, ceramicLink }) {
   const [flipped, setFlipped] = useState(false);
   return (
     <div className="flip-card-container">
@@ -15,6 +15,9 @@ export default function Card({ color = "silver", title, price, subtitle, feature
           </button>
         </div>
         <div className="flip-card-back">
+          <button className="back-arrow" onClick={() => setFlipped(false)} aria-label="Show Front">
+            ←
+          </button>
           {subtitle && <p className="subtitle">{subtitle}</p>}
           <div className="back-content">
             {features && features.length > 0 && (
@@ -29,9 +32,18 @@ export default function Card({ color = "silver", title, price, subtitle, feature
               </ul>
             )}
           </div>
-          <button className="flip-btn" onClick={() => setFlipped(false)}>
-            Show Front
-          </button>
+          {(() => {
+            const hasCeramic = Array.isArray(features) && features.some(f => typeof f === 'string' && f.toLowerCase().includes('gyors kerámia'));
+            if (hasCeramic) {
+              return (
+                <div className="action-buttons">
+                  <Link className="link-btn" to={link || page || '#'}>Rendelés</Link>
+                  <Link className="link-btn secondary" to={ceramicLink || link || page || '#'}>Kerámia opció</Link>
+                </div>
+              );
+            }
+            return <Link className="link-btn" to={link || page || '#'}>{buttonText || 'Rendelés'}</Link>;
+          })()}
         </div>
       </div>
     </div>

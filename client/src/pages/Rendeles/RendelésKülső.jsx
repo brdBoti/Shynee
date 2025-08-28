@@ -12,9 +12,9 @@ export default function RendelésKülső() {
   const cards = [
   {
     color: "silver",
-    title: "Alap",
+    title: "Standard",
     price: "1.000 Ft",
-    subtitle: "Külső tisztítás alapcsomag",
+    subtitle: "Standard külső tisztítás",
     features: [
       "rovaroldás",
       "aktív hab",
@@ -22,16 +22,18 @@ export default function RendelésKülső() {
       "falcok tisztítása",
       "viasz",
       "szárítás",
-      "kérhető extra: ülés kárpit tisztítás"
+      "kérhető extra: Gyors kerámia bevonat"
     ],
     buttonText: "Érdekel",
-    page: "rendeleskulsobelso"
+    page: "rendeleskulsobelso",
+    link: "https://shynee.salonic.hu/selectDate/?employeeId=27333&placeId=12457&serviceId=404339&startDate=1756458900&back=%2FselectEmployee%2F%3FplaceId%3D12457%26serviceId%3D404339",
+    ceramicLink: "https://shynee.salonic.hu/selectDate/?employeeId=27333&placeId=12457&serviceId=408369&startDate=1756458900&back=%2FselectEmployee%2F%3FplaceId%3D12457%26serviceId%3D408369"
   },
   {
     color: "gold",
     title: "Prémium",
     price: "2.500 Ft",
-    subtitle: "Teljes körű külső tisztítás",
+    subtitle: "Prémium külső tisztítás",
     features: [
       "felni tisztítás",
       "kátrányoldás",
@@ -44,10 +46,12 @@ export default function RendelésKülső() {
       "szárítás",
       "műanyagápolás",
       "gumiápolás",
-      "kérhető extra: ülés kárpit tisztítás"
+      "kérhető extra: Gyors kerámia bevonat"
     ],
     buttonText: "Érdekel",
-    page: "rendeleskulso"
+    page: "rendeleskulso",
+    link: "https://shynee.salonic.hu/selectDate/?employeeId=27333&placeId=12457&serviceId=408362&startDate=1756458900&back=%2FselectEmployee%2F%3FplaceId%3D12457%26serviceId%3D408362",
+    ceramicLink: "https://shynee.salonic.hu/selectDate/?employeeId=27333&placeId=12457&serviceId=408364&startDate=1756458900&back=%2FselectEmployee%2F%3FplaceId%3D12457%26serviceId%3D408364"
   },
 ];
 

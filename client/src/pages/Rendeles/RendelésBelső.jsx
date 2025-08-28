@@ -12,35 +12,37 @@ export default function RendelésBelső() {
   const cards = [
     {
       color: "silver",
-      title: "Alap",
+      title: "Standard",
       price: "10.000 Ft",
-      subtitle: "Belső tisztítás alapcsomag",
+      subtitle: "Standard belső tisztítás",
       features: [
         "porszívózás",
         "szőnyeg tisztítás",
         "utastér tisztítás",
         "ablaktisztítás",
-        "kérhető extra: ülés kárpit tisztítás"
+        
       ],
       buttonText: "Érdekel",
-      page: "rendelesbelso"
+      page: "rendelesbelso",
+      link: "https://shynee.salonic.hu/selectDate/?employeeId=27333&placeId=12457&serviceId=404515&startDate=1756458900&back=%2FselectEmployee%2F%3FplaceId%3D12457%26serviceId%3D404515"
     },
     {
       color: "gold",
       title: "Prémium",
       price: "24.999 Ft",
-      subtitle: "Teljes körű belső tisztítás",
+      subtitle: "Prémium belső tisztítás",
       features: [
         "porszívózás",
         "vegyszeres szőnyeg tisztítás",
         "utastér tisztítás",
-        "csomagtér vegyszeres tisztítás",
+        "vegyszeres ülés kárpit tisztítás",
+        "vegyszeres csomagtér tisztítás",
         "műanyag és bőr ápolás",
-        "ablaktisztítás",
-        "kérhető extra: ülés kárpit tisztítás"
+        "ablaktisztítás"
       ],
       buttonText: "Érdekel",
-      page: "rendelesbelso"
+      page: "rendelesbelso",
+      link: "https://shynee.salonic.hu/selectDate/?employeeId=27333&placeId=12457&serviceId=408359&startDate=1756458900&back=%2FselectEmployee%2F%3FplaceId%3D12457%26serviceId%3D408359"
     },
   ];
 
