@@ -218,3 +218,35 @@
   gap: 0.5rem;
   justify-content: center;
 }
+
+/* Mobile adjustments: prevent horizontal overflow and center cards vertically */
+@media (max-width: 600px) {
+  .flip-card-container {
+    --card-h: clamp(420px, 80vh, 500px);
+    width: 92vw; /* fit within viewport width */
+    max-width: 92vw;
+    height: var(--card-h);
+    display: block; /* override inline-block to avoid horizontal stacking issues */
+    margin-left: auto;
+    margin-right: auto; /* center horizontally */
+    /* slightly higher on mobile */
+    margin-top: clamp(0.25rem, calc((100vh - var(--card-h)) / 8), 0.25rem);
+    margin-bottom: clamp(0.75rem, calc((100vh - var(--card-h)) / 6), 2rem);
+    box-sizing: border-box;
+  }
+
+  .flip-card {
+    height: 100%;
+    width: 100%;
+  }
+
+  /* tighter spacing between stacked cards on mobile */
+  .flip-card-container + .flip-card-container {
+    margin-top: 0.75rem;
+  }
+
+  /* slightly smaller subtitle on back to avoid arrow overlap */
+  .flip-card-back .subtitle {
+    font-size: 0.88rem;
+  }
+}

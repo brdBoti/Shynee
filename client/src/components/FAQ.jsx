@@ -3,20 +3,36 @@ import './FAQ.css';
 
 const faqs = [
   {
-    question: 'Milyen szolgáltatásokat kínál az autókozmetika?',
-    answer: 'Teljes körű külső-belső tisztítás, kézi mosás, polírozás, viaszolás, kerámia bevonat, kárpittisztítás és szagmentesítés.'
+    question: 'Milyen településeken dolgozunk?',
+    answer: 'Budapesten és környékén – Kistarcsa, Csömör, Nagytarcsa – érhető el szolgáltatásunk. Ha nem vagy biztos benne, hogy hozzád ki tudunk menni, kérdezz bátran, és igyekszünk megoldani!'
   },
   {
-    question: 'Kell időpontot foglalni?',
-    answer: 'Igen, kérjük mindig foglalj előre időpontot online vagy telefonon, hogy biztosítani tudjuk a helyed.'
+    question: 'Hol tudunk autót mosni?',
+    answer: 'Gyakorlatilag bárhol, ahol van szabad hozzáférés az autóhoz, és elférünk körülötte. Szervizautónkkal maximum kb. 30 méterre kell tudnunk megállni. Egyetlen kizáró tényező: a nagyon forgalmas, keskeny utak, mert ott nem tudjuk garantálni a biztonságos munkát.'
   },
   {
-    question: 'Mennyi ideig tart egy kezelés?',
-    answer: 'A szolgáltatás típusától függően általában 1,5 - 4 órát vesz igénybe.'
+    question: 'Víz nélkül dolgozunk?',
+    answer: 'Nem, mert a minőség nálunk elsődleges. Víz nélkül nem lehetne olyan prémium tisztaságot biztosítani, amire büszkék vagyunk. Ha minket választasz, az autód a lehető legkíméletesebb és legprofibb mosást kapja.'
   },
   {
-    question: 'Milyen autók jöhetnek?',
-    answer: 'Személyautók, SUV-ok, furgonok – minden típust tisztítunk, akár új, akár használt.'
+    question: 'Kell áramot vagy vizet adnod?',
+    answer: 'Egyáltalán nem! Mindent viszünk magunkkal: vizet, áramot, és még a felhasznált vizet is összegyűjtjük és elszállítjuk. Neked csak hátra kell dőlnöd, mi pedig elvégezzük a munkát.'
+  },
+  {
+    question: 'Mennyi ideig tart egy autómosás?',
+    answer: 'Ez a választott szolgáltatástól függ – egy Prémium külső tisztítás kb. 1 órát vesz igénybe, míg egy Exklúzív külső-belső csomag akár 3–4 órát is igényelhet. De a végeredmény mindig megéri a várakozást!'
+  },
+  {
+    question: 'Vegyszeres ülés- és kárpittisztítás után mennyi a száradási idő?',
+    answer: 'Átlagosan 1–2 óra. Nyári melegben gyakran már a munka végeztével teljesen száraz az autó belseje, így azonnal használhatod.'
+  },
+  {
+    question: 'Miért fontos a gumi- és műanyagápolás?',
+    answer: 'Mert nem csak széppé teszi az autót: azonnal felfrissíti a felületeket, fényesebbek és újszerűbbek lesznek, miközben egy védőréteg óvja őket az UV-sugárzástól. Így a napfény kevésbé öregíti és károsítja az anyagokat.'
+  },
+  {
+    question: 'Mi a különbség a wax és a kerámia bevonat között?',
+    answer: 'A wax egy vékony viaszréteget képez, ami szép fényt ad, de sajnos rövid életű – az első vegyszeres mosás után már le is oldódhat. A kerámia bevonat ezzel szemben egy mikroszkopikus kristályréteget hoz létre a fényezésen, amely akár 3 hónapig is tartós védelmet ad. Ellenáll a vegyszeres mosásnak, kiemeli a színek mélységét, és extra fényt kölcsönöz az autónak.'
   }
 ];
 
