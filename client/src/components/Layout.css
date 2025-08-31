@@ -45,6 +45,7 @@
 /* Kapcsolat oldal */
 .page-kapcsolat {
   background-color: #1e252b;
+  min-height: 100vh;
 }
 
 /* Keyframes, ha kell a home gradienthez */

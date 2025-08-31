@@ -1,16 +1,16 @@
 .kapcsolat-container {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  padding: 40px 60px 200px;
+  align-items: center;
+  padding: 120px 60px 100px;
   font-family: 'Playfair Display', serif;
   box-sizing: border-box;
-  align-items: center;
   justify-content: center;
   background: linear-gradient(to bottom, #1e252b 0%, #001f33 100%);
   gap: 60px;
   overflow-x: hidden;
   color: #eee;
+  min-height: calc(100vh - 80px);
 }
 
 .bal-oldal {
@@ -190,8 +190,10 @@
 @media screen and (max-width: 900px) {
   .kapcsolat-container {
     flex-direction: column;
-    padding: 20px 30px 60px;
+    padding: 40px 30px 60px;
     gap: 40px;
+    min-height: auto;
+    align-items: flex-start;
   }
 
   .bal-oldal, .jobb-oldal {
@@ -223,7 +225,7 @@
   text-align: center;
   height: 60vh; 
   gap: 1rem;
-  margin-bottom: 7rem;
+  margin-bottom: 2rem;
 }
 
 .thankyou-text {
@@ -238,6 +240,11 @@
 
 /* Mobil optimalizáció */
 @media screen and (max-width: 600px) {
+  .kapcsolat-container {
+    padding: 20px 20px 40px;
+    gap: 30px;
+  }
+  
   .thankyou-text {
     font-size: 1.6rem;
   }
