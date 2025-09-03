@@ -42,7 +42,7 @@ export default function Card({ color = "silver", title, price, subtitle, feature
                 </div>
               );
             }
-            return <Link className="link-btn" to={link || page || '#'}>{buttonText || 'Rendelés'}</Link>;
+            return <Link className="link-btn" to={link || page || '#'}>Rendelés</Link>;
           })()}
         </div>
       </div>
