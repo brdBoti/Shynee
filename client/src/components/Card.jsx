@@ -11,7 +11,7 @@ export default function Card({ color = "silver", title, price, subtitle, feature
           <span className="title">{title}</span>
           <p className="pricing">{price}</p>
           <button className="flip-btn" onClick={() => setFlipped(true)}>
-            Show Back
+            Érdekel
           </button>
         </div>
         <div className="flip-card-back">
@@ -37,8 +37,8 @@ export default function Card({ color = "silver", title, price, subtitle, feature
             if (hasCeramic) {
               return (
                 <div className="action-buttons">
-                  <Link className="link-btn" to={link || page || '#'}>Kerámia nélkül kérem</Link>
-                  <Link className="link-btn secondary" to={ceramicLink || link || page || '#'}>Kerámiával kérem</Link>
+                  <Link className="link-btn" to={link || page || '#'}>Rendelés</Link>
+                  <Link className="link-btn secondary" to={ceramicLink || link || page || '#'}>Rendelés kerámiával</Link>
                 </div>
               );
             }
