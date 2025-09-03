@@ -13,7 +13,7 @@ export default function RendelésKülső() {
   {
     color: "silver",
     title: "Standard",
-    price: "1.000 Ft",
+    price: "19 900 Ft",
     subtitle: "Standard külső tisztítás",
     features: [
       "rovaroldás",
@@ -32,7 +32,7 @@ export default function RendelésKülső() {
   {
     color: "gold",
     title: "Prémium",
-    price: "2.500 Ft",
+    price: "28 900 Ft",
     subtitle: "Prémium külső tisztítás",
     features: [
       "felni tisztítás",

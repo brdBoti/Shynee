@@ -13,7 +13,7 @@ export default function RendelésBelső() {
     {
       color: "silver",
       title: "Standard",
-      price: "10.000 Ft",
+      price: "16 900 Ft",
       subtitle: "Standard belső tisztítás",
       features: [
         "porszívózás",
@@ -29,7 +29,7 @@ export default function RendelésBelső() {
     {
       color: "gold",
       title: "Prémium",
-      price: "24.999 Ft",
+      price: "25 900 Ft",
       subtitle: "Prémium belső tisztítás",
       features: [
         "porszívózás",

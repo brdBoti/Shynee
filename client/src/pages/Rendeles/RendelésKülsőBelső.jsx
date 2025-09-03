@@ -13,7 +13,7 @@ export default function RendelésKülsőBelső() {
         {
             color: "silver",
             title: "Standard",
-            price: "30.000 Ft",
+            price: "34 900 Ft",
             subtitle: "Standard külső és belső tisztítás",
             features: [
                 // Külső (Alap)
@@ -38,7 +38,7 @@ export default function RendelésKülsőBelső() {
         {
             color: "gold",
             title: "Prémium",
-            price: "50.000 Ft",
+            price: "52 900 Ft",
             subtitle: "Prémium külső és belső tisztítás",
             features: [
                 // Külső (Prémium)
