@@ -30,7 +30,7 @@ export default function RendelésKülsőBelső() {
                 "ablaktisztítás",
                 "kérhető extra: Gyors kerámia bevonat"
             ],
-            buttonText: "Érdekel",
+            buttonText: "Rendelés",
             page: "rendeleskulsobelso",
             link: "https://shynee.salonic.hu/selectDate/?employeeId=27333&placeId=12457&serviceId=404517&startDate=1756458900&back=%2FselectEmployee%2F%3FplaceId%3D12457%26serviceId%3D404517",
             ceramicLink: "https://shynee.salonic.hu/selectDate/?employeeId=27333&placeId=12457&serviceId=408371&startDate=1756458900&back=%2FselectEmployee%2F%3FplaceId%3D12457%26serviceId%3D408371"
@@ -62,7 +62,7 @@ export default function RendelésKülsőBelső() {
                 "ablaktisztítás",
                 "kérhető extra: Gyors kerámia bevonat"
             ],
-            buttonText: "Érdekel",
+            buttonText: "Rendelés",
             page: "rendeleskulsobelso",
             link: "https://shynee.salonic.hu/selectDate/?employeeId=27333&placeId=12457&serviceId=408365&startDate=1756458900&back=%2FselectEmployee%2F%3FplaceId%3D12457%26serviceId%3D408365",
             ceramicLink: "https://shynee.salonic.hu/selectDate/?employeeId=27333&placeId=12457&serviceId=408367&startDate=1756458900&back=%2FselectEmployee%2F%3FplaceId%3D12457%26serviceId%3D408367"
