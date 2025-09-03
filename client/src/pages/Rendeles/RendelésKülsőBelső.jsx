@@ -12,9 +12,9 @@ export default function RendelésKülsőBelső() {
     const cards = [
         {
             color: "silver",
-            title: "Standard",
+            title: "Prémium",
             price: "34 900 Ft",
-            subtitle: "Standard külső és belső tisztítás",
+            subtitle: "Prémium külső és belső tisztítás",
             features: [
                 // Külső (Alap)
                 "rovaroldás",
@@ -37,9 +37,9 @@ export default function RendelésKülsőBelső() {
         },
         {
             color: "gold",
-            title: "Prémium",
+            title: "Ultra",
             price: "52 900 Ft",
-            subtitle: "Prémium külső és belső tisztítás",
+            subtitle: "Ultra külső és belső tisztítás",
             features: [
                 // Külső (Prémium)
                 "felni tisztítás",

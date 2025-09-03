@@ -12,9 +12,9 @@ export default function RendelésKülső() {
   const cards = [
   {
     color: "silver",
-    title: "Standard",
+    title: "Prémium",
     price: "19 900 Ft",
-    subtitle: "Standard külső tisztítás",
+    subtitle: "Prémium külső tisztítás",
     features: [
       "rovaroldás",
       "aktív hab",
@@ -31,9 +31,9 @@ export default function RendelésKülső() {
   },
   {
     color: "gold",
-    title: "Prémium",
+    title: "Ultra",
     price: "28 900 Ft",
-    subtitle: "Prémium külső tisztítás",
+    subtitle: "Ultra külső tisztítás",
     features: [
       "felni tisztítás",
       "kátrányoldás",
