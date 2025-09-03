@@ -37,8 +37,8 @@ export default function Card({ color = "silver", title, price, subtitle, feature
             if (hasCeramic) {
               return (
                 <div className="action-buttons">
-                  <Link className="link-btn" to={link || page || '#'}>Rendelés</Link>
-                  <Link className="link-btn secondary" to={ceramicLink || link || page || '#'}>Kerámia opció</Link>
+                  <Link className="link-btn" to={link || page || '#'}>Kerámia nélkül kérem</Link>
+                  <Link className="link-btn secondary" to={ceramicLink || link || page || '#'}>Kerámiával kérem</Link>
                 </div>
               );
             }
