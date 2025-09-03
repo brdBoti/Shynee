@@ -41,7 +41,6 @@ export default function RendelésKülső() {
       "aktív hab",
       "samponos kézi mosás",
       "falcok tisztítása",
-      "gyors kerámia",
       "viasz",
       "szárítás",
       "műanyagápolás",
