@@ -36,7 +36,7 @@ export default function RendelésKülsőBelső() {
             ceramicLink: "https://shynee.salonic.hu/selectDate/?employeeId=27333&placeId=12457&serviceId=408371&startDate=1756458900&back=%2FselectEmployee%2F%3FplaceId%3D12457%26serviceId%3D408371"
         },
         {
-            color: "gold",
+            color: "blue",
             title: "Ultra",
             price: "52 900 Ft",
             subtitle: "Ultra külső és belső tisztítás",

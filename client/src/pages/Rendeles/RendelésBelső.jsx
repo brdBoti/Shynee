@@ -27,7 +27,7 @@ export default function RendelésBelső() {
       link: "https://shynee.salonic.hu/selectDate/?employeeId=27333&placeId=12457&serviceId=404515&startDate=1756458900&back=%2FselectEmployee%2F%3FplaceId%3D12457%26serviceId%3D404515"
     },
     {
-      color: "gold",
+      color: "blue",
       title: "Ultra",
       price: "25 900 Ft",
       subtitle: "Ultra belső tisztítás",
