@@ -74,14 +74,14 @@ export default function Card({
                     <button className="button"><span className="text-button">Rendelés</span></button>
                   </Link>
                   <Link to={ceramicLink || linkTo}>
-                    <button className="button secondary"><span className="text-button">Kerámiával</span></button>
+                    <button className="button secondary"><span className="text-button">Rendelés kerámiával</span></button>
                   </Link>
                 </div>
               );
             }
             return (
               <Link to={linkTo}>
-                <button className="button"><span className="text-button">{buttonText}</span></button>
+                <button className="button"><span className="text-button">Rendelés</span></button>
               </Link>
             );
           })()}

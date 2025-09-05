@@ -43,7 +43,8 @@
   transform: rotateY(180deg);
   justify-content: flex-start;
   gap: 1rem;
-  padding: 3rem;
+  padding: 2.1rem;
+  padding-top: 3rem;
 }
 
 .flip-card-back .title {
@@ -69,6 +70,19 @@
   max-height: 100%; /* Ne fix 800px legyen, hanem a kártyához igazodjon */
   overflow-y: auto;
   padding-right: 0.5rem;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 0.75rem;
+  padding: 0.5rem 1rem 1rem 0.9rem;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.18);
+  position: relative;
+}
+
+/* Scroll jelzés: blurry fade az alján - csak akkor jelenik meg, ha van scroll */
+.flip-card-back .list {
+  background: 
+    linear-gradient(to bottom, transparent 0%, transparent 50%, rgba(28, 28, 30, 0.3) 80%, rgba(28, 28, 30, 1) 100%),
+    rgba(255, 255, 255, 0.035);
 }
 
 
@@ -135,6 +149,11 @@
   margin: 0;
 }
 
+/* Back oldal listájának extra térköze – felülírja az alap padding:0-t */
+.flip-card-back .list {
+  padding: 0.5rem 1rem 1rem 1rem;
+}
+
 .card .list .list-item {
   display: flex;
   align-items: center;
@@ -142,7 +161,7 @@
 
 .card .list .list-item .check {
   margin-right: 0.5rem;
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 900;
   filter: drop-shadow(0 0 0.5px rgba(255, 255, 255, 0.15));
 }
@@ -218,6 +237,22 @@
   gap: 0.5rem;
   justify-content: center;
   margin-top: 1rem;
+}
+
+.action-buttons .button {
+  margin: 0;
+  flex: 1;
+  font-size: 0.9rem;
+  padding: 0.6rem 0.4rem;
+  white-space: nowrap;
+}
+
+.action-buttons .button:first-child {
+  flex: 0.7; /* Rendelés gomb keskenyebb */
+}
+
+.action-buttons .button:last-child {
+  flex: 1.3; /* Kerámiával gomb szélesebb */
 }
 
 .button.secondary {
