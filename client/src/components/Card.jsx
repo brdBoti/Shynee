@@ -55,10 +55,23 @@ export default function Card({
           <ul className="list">
             {features.map((feature, i) => {
               const text = typeof feature === 'string' ? feature.trim().toLowerCase() : '';
-              const isExtra = text.includes('extra');
+              const isExtra = text.includes('extra') || text.includes('kerámia csomag');
+              const isCeramic = text.includes('kerámia csomag');
+              const capitalizedFeature = typeof feature === 'string' ? 
+                feature.charAt(0).toUpperCase() + feature.slice(1) : feature;
               return (
                 <li className={`list-item ${isExtra ? 'is-extra' : ''}`} key={i}>
-                  <span className="check">{isExtra ? '+' : '✓'}</span> {feature}
+                  <span className="check">{isExtra ? '+' : '✓'}</span> {capitalizedFeature}
+                  {isCeramic && (
+                    <div className="info-tooltip">
+                      <span className="info-icon">i</span>
+                      <div className="tooltip-content">
+                        <div className="tooltip-item">Fémrészecske-eltávolítás</div>
+                        <div className="tooltip-item">Agyag gyurmás mélytisztítás</div>
+                        <div className="tooltip-item">Gyors kerámia bevonat</div>
+                      </div>
+                    </div>
+                  )}
                 </li>
               );
             })}
@@ -66,7 +79,7 @@ export default function Card({
 
           {/* --- Rendelés gombok logika (mint az 1. kártyában) --- */}
           {(() => {
-            const hasCeramic = Array.isArray(features) && features.some(f => typeof f === 'string' && f.toLowerCase().includes('gyors kerámia'));
+            const hasCeramic = Array.isArray(features) && features.some(f => typeof f === 'string' && f.toLowerCase().includes('kerámia csomag'));
             if (hasCeramic) {
               return (
                 <div className="action-buttons">

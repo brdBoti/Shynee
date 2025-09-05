@@ -28,7 +28,7 @@ export default function RendelésKülsőBelső() {
                 "szőnyeg tisztítás",
                 "utastér tisztítás",
                 "ablaktisztítás",
-                "kérhető extra: Gyors kerámia bevonat"
+                "Kérhető kerámia csomag"
             ],
             buttonText: "Rendelés",
             page: "rendeleskulsobelso",
@@ -60,7 +60,7 @@ export default function RendelésKülsőBelső() {
                 "vegyszeres csomagtér tisztítás",
                 "műanyag és bőr ápolás",
                 "ablaktisztítás",
-                "kérhető extra: Gyors kerámia bevonat"
+                "Kérhető kerámia csomag"
             ],
             buttonText: "Rendelés",
             page: "rendeleskulsobelso",
