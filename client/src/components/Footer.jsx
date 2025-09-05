@@ -39,7 +39,7 @@ export default function Footer() {
           <div className="social-icons">
             <a href="https://www.instagram.com/shynee.hu/" target="_blank" rel="noreferrer" className="icon--instagram"><FaInstagram /></a>
             <a href="https://www.facebook.com/profile.php?id=61579712527671" target="_blank" rel="noreferrer"><FaFacebookF /></a>
-            <a href="https://tiktok.com" target="_blank" rel="noreferrer"><SiTiktok /></a>
+            <a href="https://www.tiktok.com/@shynee.budapest" target="_blank" rel="noreferrer"><SiTiktok /></a>
           </div>
         </div>
 
