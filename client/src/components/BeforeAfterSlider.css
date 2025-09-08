@@ -6,6 +6,8 @@
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   cursor: grab;
   user-select: none;
+  aspect-ratio: 1 / 1;
+  height: auto;
 }
 
 .before-after-container:active {
@@ -115,7 +117,7 @@
 /* Mobile Optimizations */
 @media (max-width: 768px) {
   .before-after-container {
-    aspect-ratio: 16/9;
+    aspect-ratio: 1/1;
     height: auto !important;
   }
   

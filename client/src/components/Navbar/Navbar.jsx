@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import './Navbar.css';
-import logo from './logo.png';
+import logo from './logo.webp';
 
 const navLinks = [
   { path: '/rendeles', label: 'Rendelés' },

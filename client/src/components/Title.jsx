@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import './Title.css';
-import shyneetextpng from '../images/shyneetextniceres2.PNG';
+import shyneetextpng from '../images/shyneetextniceres2.webp';
 
 const subText = "Autóápolás Mindenhol";
 const typingSpeed = 80;

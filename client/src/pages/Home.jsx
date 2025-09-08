@@ -2,30 +2,40 @@
   import Title from '../components/Title';
   import BeforeAfterSlider from '../components/BeforeAfterSlider';
 
-  import kep1 from '../images/kep1.png';
-  import kep2 from '../images/kep2.png';
-  import kep3 from '../images/kep3.png';
-  import kep4 from '../images/kep4.png';
+  import bmw_3k from '../images/bmw_3k.webp';
+  import bmw_3t from '../images/bmw_3t.webp';
+  import bmw_4k from '../images/bmw_4k.webp';
+  import bmw_4t from '../images/bmw_4t.webp';
+  import bmw_6k from '../images/bmw_6k.webp';
+  import bmw_6t from '../images/bmw_6t.webp';
+  import merci_2k from '../images/merci_2k.webp';
+  import merci_2t from '../images/merci_2t.webp';
+  import toyo_4k from '../images/toyo_4k.webp';
+  import toyo_4t from '../images/toyo_4t.webp';
+  import vw_2k from '../images/vw_2k.webp';
+  import vw_2t from '../images/vw_2t.webp';
+  import vw_4k from '../images/vw_4k.webp';
+  import vw_4t from '../images/vw_4t.webp';
+  import vw_9k from '../images/vw_9k.webp';
+  import vw_9t from '../images/vw_9t.webp';
   import boti from '../images/boti.webp';
   import bese from '../images/bese.webp';
   import shiny_outside from '../images/shiny_outside.jpg';
   import shiny_inside from '../images/shiny_inside.png';
-  import shyneeindex from '../images/shyneeindex.png';
-  import shyneetextniceres2 from '../images/shyneetextniceres2.PNG';
-  import ShyneeLOGO from '../images/ShyneeLOGO.png';
+  import shyneetextniceres2 from '../images/shyneetextniceres2.webp';
   import './Home.css';
   import FAQ from '../components/FAQ';
 
   export default function Home() {
     const sliderPairs = [
-      { before: kep1, after: kep1 },
-      { before: kep1, after: kep1 },
-      { before: kep1, after: kep1 },
-      { before: kep1, after: kep1 },
-      { before: kep1, after: kep1 },
-      { before: kep1, after: kep1 },
-      { before: kep1, after: kep1 },
-      { before: kep1, after: kep1 }
+      { before: merci_2k, after: merci_2t },
+      { before: toyo_4k,  after: toyo_4t  },
+      { before: vw_2k,    after: vw_2t    },
+      { before: vw_4k,    after: vw_4t    },
+      { before: vw_9k,    after: vw_9t    },
+      { before: bmw_3k,   after: bmw_3t   },
+      { before: bmw_4k,   after: bmw_4t   },
+      { before: bmw_6k,   after: bmw_6t   }
     ];
 
     return (
@@ -66,7 +76,7 @@
                     beforeImage={pair.before}
                     afterImage={pair.after}
                     width="100%"
-                    height="300px"
+                    height="auto"
                   />
                 </div>
               ))}

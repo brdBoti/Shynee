@@ -2,11 +2,9 @@ import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import video from "../videos/video1.mp4";
-import poster from "../images/kep2.png";
-import kep1 from "../images/kep1.png";
+import poster from "../images/shiny_outside.jpg";
 import kep2 from "../images/bese.webp";
 import kep3 from "../images/boti.webp";
-import shynee from "../images/ShyneeLOGO.png";
 import "./Rólunk.css";
 import { Link } from "react-router-dom";
 
@@ -21,10 +19,6 @@ export default function Rólunk() {
   const motto = "Minőség. Szenvedély. Megbízhatóság.";
 
   const imageData = [
-    {
-      image: shynee,
-      text: `A Shynee 2025-ben alakult Budapesten azzal a céllal, hogy új szintre emelje az autóápolás élményét: kompromisszumok nélkül, házhoz jövünk – akár otthonodba, akár munkahelyedhez – és prémium minőségben tisztítjuk meg autódat kívül-belül.`,
-    },
     { image: kep2, text: "Text" },
     { image: kep3, text: "Text" },
   ];
@@ -171,8 +165,8 @@ export default function Rólunk() {
             >
               <motion.img
                 src={item.image}
-                alt={item.image === shynee ? "shyneelogo" : `image-${index}`}
-                className={`side-image ${item.image === shynee ? "shynee-logo" : ""}`}
+                alt={`image-${index}`}
+                className="side-image"
                 initial={{ opacity: 0 }}
                 animate={inView ? { opacity: 1 } : {}}
                 transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}

@@ -6,7 +6,7 @@ import './Footer.css';
 import simplepayLogo from '../images/logos/simplepay.svg';
 import visaLogo from '../images/logos/Visa_Inc._logo.svg';
 import mastercardLogo from '../images/logos/Mastercard.svg';
-import shyneeText from '../images/shyneetextniceres2.PNG';
+import shyneeText from '../images/shyneetextniceres2.webp';
 
 export default function Footer() {
   const scrollToTop = () => {
