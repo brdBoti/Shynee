@@ -23,7 +23,7 @@ export default function Rólunk() {
 
 Egy autó igazi értékét nemcsak a birtoklása adja, hanem az, ahogyan gondoskodunk róla. A Shynee-nál abban hiszünk, hogy az autó több, mint egyszerű jármű. Stílus, élmény és presztízs egyben.
 
-Prémium mobil autókozmetikánkkal azt a célt tűztük ki, hogy ügyfeleink autói mindig szalonfényben tündököljenek, ott, ahol épp szükség van ránk. Minden részlet számít: nemcsak tisztítunk, hanem odafigyelünk, hogy a külső és a belső egyaránt makulátlan legyen.
+Prémium mobil autókozmetikánkkal azt a célt tűztük ki, hogy ügyfeleink autói mindig szalonfényben tündököljenek, bárhol is legyenek. Minden részlet számít: nemcsak tisztítunk, hanem odafigyelünk, hogy a külső és a belső egyaránt makulátlan legyen.
 
 Kényelmes, rugalmas és professzionális szolgáltatást nyújtunk, Önnek pedig csak annyi a dolga, hogy átvegye a ragyogó végeredményt.` },
     { image: kep3, text: `„A minőség nem luxus, hanem alapérték.”
