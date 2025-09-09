@@ -29,6 +29,10 @@
   width: 100%;
   position: absolute;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden; /* Safari/old WebKit */
+  -moz-backface-visibility: hidden; /* Firefox fix */
+  transform-style: preserve-3d; /* Ensure 3D context for faces */
+  transform: translateZ(0.01px); /* Nudge to avoid text bleed in Firefox */
   border-radius: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -45,6 +49,14 @@
   gap: 1rem;
   padding: 2.1rem;
   padding-top: 3rem;
+}
+
+/* Extra safety: hide backfaces for all nested elements to prevent bleed-through on Firefox */
+.flip-card-front *,
+.flip-card-back * {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
 }
 
 .flip-card-back .title {
