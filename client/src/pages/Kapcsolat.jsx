@@ -49,7 +49,7 @@ export default function Kapcsolat() {
     const formData = new FormData(e.target);
 
     try {
-      const response = await fetch('https://formspree.io/f/xdkdeejo', {
+      const response = await fetch('https://formspree.io/f/xwpnyvyr', {
         method: 'POST',
         headers: { Accept: 'application/json' },
         body: formData,
