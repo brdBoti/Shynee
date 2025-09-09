@@ -19,8 +19,20 @@ export default function Rólunk() {
   const motto = "Minőség. Szenvedély. Megbízhatóság.";
 
   const imageData = [
-    { image: kep2, text: "Text" },
-    { image: kep3, text: "Text" },
+    { image: kep2, text: `„A prémium autó prémium törődést érdemel.”
+
+Egy autó igazi értékét nemcsak a birtoklása adja, hanem az, ahogyan gondoskodunk róla. A Shynee-nál abban hiszünk, hogy az autó több, mint egyszerű jármű. Stílus, élmény és presztízs egyben.
+
+Prémium mobil autókozmetikánkkal azt a célt tűztük ki, hogy ügyfeleink autói mindig szalonfényben tündököljenek, ott, ahol épp szükség van ránk. Minden részlet számít: nemcsak tisztítunk, hanem odafigyelünk, hogy a külső és a belső egyaránt makulátlan legyen.
+
+Kényelmes, rugalmas és professzionális szolgáltatást nyújtunk, Önnek pedig csak annyi a dolga, hogy átvegye a ragyogó végeredményt.` },
+    { image: kep3, text: `„A minőség nem luxus, hanem alapérték.”
+
+Ezzel a szemlélettel hoztuk létre mobil autókozmetikánkat a testvéremmel közösen. Szeretnénk elérhetővé tenni a prémium minőségű autóápolást mindazok számára, akik igazán szeretik autójukat, és nem érik be kevesebbel.
+
+Budapesten belül bárhová kimegyünk, így nem kell időt vesztegetni autómosókban, mi visszük házhoz a szalonszínvonalú tisztaságot.
+
+Fiatal, lelkes és maximalista csapatként hiszünk abban, hogy a részletek teszik igazán különlegessé az eredményt. Minden autónál úgy dolgozunk, mintha a sajátunk lenne.` },
   ];
 
   useEffect(() => {
