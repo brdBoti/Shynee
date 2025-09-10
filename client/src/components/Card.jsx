@@ -17,18 +17,7 @@ export default function Card({
 }) {
   const [flipped, setFlipped] = useState(false);
 
-  // --- Logika a linkTo kiválasztására (mint a 2. kártyában) ---
-  let linkTo = link || 'https://spotless.salonic.hu/';
-  if (page === 'rendelesbelso') {
-    if (title === 'Alap') linkTo = 'https://shynee.salonic.hu/selectEmployee/?placeId=12457&serviceId=404515';
-    else if (title === 'Prémium') linkTo = 'https://shynee.salonic.hu/selectEmployee/?placeId=12457&serviceId=404516';
-  } else if (page === 'rendeleskulso') {
-    if (title === 'Alap') linkTo = 'https://shynee.salonic.hu/selectEmployee/?placeId=12457&serviceId=404339';
-    else if (title === 'Prémium') linkTo = 'https://shynee.salonic.hu/selectEmployee/?placeId=12457&serviceId=404340';
-  } else if (page === 'rendeleskulsobelso') {
-    if (title === 'Alap') linkTo = 'https://shynee.salonic.hu/selectEmployee/?placeId=12457&serviceId=404517';
-    else if (title === 'Prémium') linkTo = 'https://shynee.salonic.hu/selectEmployee/?placeId=12457&serviceId=404518';
-  }
+  // A linket közvetlenül a gomb renderelésekor fogjuk meghatározni
 
   return (
     <div className="flip-card-container">
@@ -87,23 +76,24 @@ export default function Card({
             })}
           </ul>
 
-          {/* --- Rendelés gombok logika (mint az 1. kártyában) --- */}
+          {/* --- Rendelés gombok --- */}
           {(() => {
+            const primaryLink = link || 'https://shynee.salonic.hu/';
             const hasCeramic = Array.isArray(features) && features.some(f => typeof f === 'string' && f.toLowerCase().includes('kerámia csomag'));
             if (hasCeramic) {
               return (
                 <div className="action-buttons">
-                  <Link to={linkTo}>
+                  <Link to={primaryLink}>
                     <button className="button"><span className="text-button">Rendelés</span></button>
                   </Link>
-                  <Link to={ceramicLink || linkTo}>
+                  <Link to={ceramicLink || primaryLink}>
                     <button className="button secondary"><span className="text-button">Rendelés kerámiával</span></button>
                   </Link>
                 </div>
               );
             }
             return (
-              <Link to={linkTo}>
+              <Link to={primaryLink}>
                 <button className="button"><span className="text-button">Rendelés</span></button>
               </Link>
             );
