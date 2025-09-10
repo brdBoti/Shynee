@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Card.css';
+import shyneeLogo1 from '../images/shyneelogo1.webp';
+import shyneeLogo2 from '../images/shyneelogo2.webp';
 
 export default function Card({ 
   color = "silver", 
@@ -40,8 +42,16 @@ export default function Card({
           </p>
           {subtitle && <span className="sub-title">{subtitle}</span>}
 
+          {(title === 'Prémium' || title === 'Ultra') && (
+            <img
+              className="brand-logo"
+              src={title === 'Ultra' ? shyneeLogo1 : shyneeLogo2}
+              alt={title === 'Ultra' ? 'Shynee logo 1' : 'Shynee logo 2'}
+            />
+          )}
+
           <button className="button flip-btn" onClick={() => setFlipped(true)}>
-            <span className="text-button">Érdekel</span>
+            <span className="text-button">Részletek</span>
           </button>
         </div>
 

@@ -2,8 +2,9 @@ import Loading from '../../components/Loading/Loading';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';  // <-- import Link
 import './Rendelés.css';
-import shiny_outside from '../../images/shiny_outside.jpg';
-import shiny_inside from '../../images/shiny_inside.png';
+import shiny_outside from '../../images/kulso.webp';
+import shiny_inside from '../../images/belso.webp';
+import shiny_outin from '../../images/kulso-belso.webp';
 
 export default function Rendelés() {
   const [loading, setLoading] = useState(false);
@@ -33,7 +34,7 @@ export default function Rendelés() {
         <div
           className="card-bg-rendeles"
           style={{
-            backgroundImage: `url(${shiny_inside})`,
+            backgroundImage: `url(${shiny_outin})`,
           }}
         />
         <div className="card-content-rendeles">Külső-belső mosás</div>

@@ -20,8 +20,8 @@
   import vw_9t from '../images/vw_9t.webp';
   import boti from '../images/boti.webp';
   import bese from '../images/bese.webp';
-  import shiny_outside from '../images/shiny_outside.jpg';
-  import shiny_inside from '../images/shiny_inside.png';
+  import shiny_outside from '../images/kulso.webp';
+  import shiny_inside from '../images/belso.webp';
   import shyneetextniceres2 from '../images/shyneetextniceres2.webp';
   import './Home.css';
   import FAQ from '../components/FAQ';

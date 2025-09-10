@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import video from "../videos/video1.mp4";
-import poster from "../images/shiny_outside.jpg";
+import poster from "../images/kulso.webp";
 import kep2 from "../images/bese.webp";
 import kep3 from "../images/boti.webp";
 import "./Rólunk.css";
