@@ -26,8 +26,8 @@ export default function RendelésKülső() {
     ],
     buttonText: "Rendelés",
     page: "rendeleskulsobelso",
-    link: "https://shynee.salonic.hu/selectDate/?employeeId=27333&placeId=12457&serviceId=404339&startDate=1756458900&back=%2FselectEmployee%2F%3FplaceId%3D12457%26serviceId%3D404339",
-    ceramicLink: "https://shynee.salonic.hu/selectDate/?employeeId=27333&placeId=12457&serviceId=408369&startDate=1756458900&back=%2FselectEmployee%2F%3FplaceId%3D12457%26serviceId%3D408369"
+    link: "https://shynee.salonic.hu/selectDate/?employeeId=27333&placeId=12457&serviceId=404339&startDate=1757570400&back=%2FselectEmployee%2F%3FplaceId%3D12457%26serviceId%3D404339",
+    ceramicLink: "https://shynee.salonic.hu/selectDate/?employeeId=27333&placeId=12457&serviceId=408369&startDate=1757570400&back=%2FselectEmployee%2F%3FplaceId%3D12457%26serviceId%3D408369"
   },
   {
     color: "blue",
@@ -49,8 +49,8 @@ export default function RendelésKülső() {
     ],
     buttonText: "Rendelés",
     page: "rendeleskulso",
-    link: "https://shynee.salonic.hu/selectDate/?employeeId=27333&placeId=12457&serviceId=408362&startDate=1756458900&back=%2FselectEmployee%2F%3FplaceId%3D12457%26serviceId%3D408362",
-    ceramicLink: "https://shynee.salonic.hu/selectDate/?employeeId=27333&placeId=12457&serviceId=408364&startDate=1756458900&back=%2FselectEmployee%2F%3FplaceId%3D12457%26serviceId%3D408364"
+    link: "https://shynee.salonic.hu/selectDate/?employeeId=27333&placeId=12457&serviceId=408362&startDate=1757570400&back=%2FselectEmployee%2F%3FplaceId%3D12457%26serviceId%3D408362",
+    ceramicLink: "https://shynee.salonic.hu/selectDate/?employeeId=27333&placeId=12457&serviceId=408364&startDate=1757570400&back=%2FselectEmployee%2F%3FplaceId%3D12457%26serviceId%3D408364"
   },
 ];
 

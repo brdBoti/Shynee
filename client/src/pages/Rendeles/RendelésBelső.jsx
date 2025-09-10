@@ -24,7 +24,7 @@ export default function RendelésBelső() {
       ],
       buttonText: "Érdekel",
       page: "rendelesbelso",
-      link: "https://shynee.salonic.hu/selectDate/?employeeId=27333&placeId=12457&serviceId=404515&startDate=1756458900&back=%2FselectEmployee%2F%3FplaceId%3D12457%26serviceId%3D404515"
+      link: "https://shynee.salonic.hu/selectDate/?employeeId=27333&placeId=12457&serviceId=404515&startDate=1757570400&back=%2FselectEmployee%2F%3FplaceId%3D12457%26serviceId%3D404515"
     },
     {
       color: "blue",
@@ -42,7 +42,7 @@ export default function RendelésBelső() {
       ],
       buttonText: "Érdekel",
       page: "rendelesbelso",
-      link: "https://shynee.salonic.hu/selectDate/?employeeId=27333&placeId=12457&serviceId=408359&startDate=1756458900&back=%2FselectEmployee%2F%3FplaceId%3D12457%26serviceId%3D408359"
+      link: "https://shynee.salonic.hu/selectDate/?employeeId=27333&placeId=12457&serviceId=408359&startDate=1757570400&back=%2FselectEmployee%2F%3FplaceId%3D12457%26serviceId%3D408359"
     },
   ];
 
