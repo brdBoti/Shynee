@@ -74,6 +74,15 @@
   user-select: none;
 }
 
+/* The below arrow is used under the hero image on mobile only */
+.scroll-indicator.below { display: none; }
+
+/* 🖥️ Desktop: show the overlay arrow; hide the below-arrow */
+@media (min-width: 769px) {
+  .scroll-indicator { display: block; margin-top: -24px; }
+  .scroll-indicator.below { display: none; }
+}
+
 .content-section {
   display: flex;
   flex-direction: column;
@@ -303,28 +312,36 @@
 
 /* 📱 Mobil fixek */
 @media (max-width: 768px) {
+  .hero-rolunk-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: auto;
+    text-align: center;
+  }
+
   .video-gradient-overlay {
-    margin-top: 231px;
-    height: 35px;
+    margin-top: 0;
+    height: 20px;
     position: absolute;
-    top: -1000px;
+    top: 0;
     left: 0;
     width: 100%;
     z-index: 10;
     pointer-events: none;
     background: linear-gradient(to bottom,
         #040307,
-        #010006a2,
-        #00121e42,
-        #00121e26,
+        #01000688,
+        #00121e33,
         transparent);
   }
 
   .video-gradient-bottom-overlay {
-    margin-bottom: 235px;
-    height: 25px;
+    margin-bottom: 0;
+    height: 20px;
     position: absolute;
-    bottom: -10000px;
+    bottom: 0;
     left: 0;
     width: 100%;
     z-index: 10;
@@ -336,31 +353,38 @@
         transparent);
   }
 
-  .video-box {
-    width: 100%;
+  .hero-rolunk-section {
     height: auto;
   }
 
+  .video-box {
+    width: 100%;
+    height: auto;
+    order: 2;
+  }
+
   .rolunk-container {
-    margin-top: 1rem;
+    margin-top: 0;
   }
 
   .hero-video {
     width: 100%;
-    height: 300px;
-    /* ez jó így, de lehet responsive is */
+    height: 260px;
     object-fit: contain;
-    /* NE vágja a videót */
   }
 
 
   .hero-overlay {
-    top: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
-    max-width: 90%;
+    position: static;
+    top: auto;
+    left: auto;
+    transform: none;
+    max-width: 92%;
     padding: 0 1rem;
     z-index: 2;
+    order: 1;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
   }
 
   .hero-motto {
@@ -368,16 +392,25 @@
     margin-bottom: 0.1rem;
   }
 
-  .scroll-indicator {
+  .scroll-indicator { display: none; }
+
+  .scroll-indicator.below {
+    display: block;
     font-size: 2rem;
-    margin-top: 340px;
+    color: #00b8e6;
+    animation: bounce 2s infinite;
+    margin-top: 0.5rem;
+    margin-bottom: 1.25rem;
+    order: 3; /* ensure it renders after the image */
+    align-self: center;
   }
+
+  /* Add space under hero image so next content doesn't peek in */
+  .video-box { margin-bottom: 1.25rem; }
 
   /* removed video control buttons on mobile */
 
-  .rolunk-container {
-    padding-top: 4rem;
-  }
+  .rolunk-container { padding-top: 0; }
 
   .content-section {
     padding: 2rem 1rem 1rem;

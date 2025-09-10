@@ -47,6 +47,8 @@ Fiatal, lelkes és maximalista csapatként hiszünk abban, hogy a részletek tes
           />
         </div>
 
+        <div className="scroll-indicator below">↓</div>
+
         <div className="hero-overlay">
           <motion.h1
             className="hero-motto"
@@ -56,7 +58,6 @@ Fiatal, lelkes és maximalista csapatként hiszünk abban, hogy a részletek tes
           >
             {motto}
           </motion.h1>
-
           <motion.div
             className="scroll-indicator"
             initial={{ opacity: 0 }}
