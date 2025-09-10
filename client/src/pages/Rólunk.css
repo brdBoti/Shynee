@@ -43,70 +43,7 @@
   z-index: 5;
 }
 
-.video-control-btn {
-  position: absolute;
-  bottom: 60px;
-  z-index: 20;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: #00cfff;
-  border: none;
-  font-size: 1.6rem;
-  padding: 10px 14px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 10px rgba(0, 207, 255, 0.4);
-}
-
-.video-control-btn:hover {
-  background-color: rgba(0, 0, 0, 0.9);
-  box-shadow: 0 0 14px rgba(0, 207, 255, 0.7);
-}
-
-.fullscreen-btn {
-  right: 20px;
-  background-color: rgba(0, 170, 255, 0.1);
-  backdrop-filter: blur(6px);
-  border: 1px solid rgba(0, 170, 255, 0.4);
-  box-shadow: 0 0 6px rgba(0, 170, 255, 0.6);
-  color: #00cfff;
-  font-size: 1.8rem;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  transition: all 0.3s ease;
-
-  opacity: 0;
-  /* teljesen láthatatlan induláskor */
-  animation: fadeInUp 1s ease forwards;
-  animation-delay: 1.5s;
-  /* 1.5 másodperc késleltetés */
-}
-
-.fullscreen-btn:hover {
-  background-color: rgba(0, 170, 255, 0.25);
-  box-shadow: 0 0 12px rgba(0, 170, 255, 0.9);
-}
-
-.replay-btn {
-  left: 20px;
-}
-
-.replay-btn::before {
-  content: "";
-  display: inline-block;
-  margin-left: 3px;
-  width: 0;
-  height: 0;
-  border-top: 14px solid transparent;
-  border-bottom: 14px solid transparent;
-  border-left: 24px solid #00cfff;
-  transition: border-left-color 0.3s ease;
-}
-
-.replay-btn:hover::before {
-  border-left-color: #0099e0;
-}
+/* removed video control buttons */
 
 .hero-overlay {
   position: absolute;
@@ -436,20 +373,7 @@
     margin-top: 340px;
   }
 
-  .video-control-btn {
-    bottom: 0.75rem;
-    padding: 10px;
-  }
-
-  .fullscreen-btn {
-    right: 0.75rem;
-    bottom: 3.2rem;
-  }
-
-  .replay-btn {
-    left: 0.75rem;
-    bottom: 0.75rem;
-  }
+  /* removed video control buttons on mobile */
 
   .rolunk-container {
     padding-top: 4rem;

@@ -1,20 +1,13 @@
-import React, { useState, useRef, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import video from "../videos/video1.mp4";
-import poster from "../images/kulso.webp";
+import heroImage from "../images/kozos.webp";
 import kep2 from "../images/bese.webp";
 import kep3 from "../images/boti.webp";
 import "./Rólunk.css";
 import { Link } from "react-router-dom";
 
 export default function Rólunk() {
-  const [contentVisible, setContentVisible] = useState(false);
-  const [overlayVisible, setOverlayVisible] = useState(true);
-  const [videoLoaded, setVideoLoaded] = useState(false);
-  const [showReplay, setShowReplay] = useState(false);
-  const [isIOS, setIsIOS] = useState(false);
-  const videoRef = useRef(null);
 
   const motto = "Minőség. Szenvedély. Megbízhatóság.";
 
@@ -35,55 +28,7 @@ Budapesten belül bárhová kimegyünk, így nem kell időt vesztegetni autómos
 Fiatal, lelkes és maximalista csapatként hiszünk abban, hogy a részletek teszik igazán különlegessé az eredményt. Minden autónál úgy dolgozunk, mintha a sajátunk lenne.` },
   ];
 
-  useEffect(() => {
-    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    setIsIOS(/iPad|iPhone|iPod/.test(userAgent));
-  }, []);
-
-  const handleCanPlay = () => {
-    setContentVisible(true);
-    setVideoLoaded(true);
-    setOverlayVisible(false);
-  };
-
-  const handleFullscreen = () => {
-    const video = videoRef.current;
-    if (!video) return;
-    setShowReplay(false);
-    if (video.requestFullscreen) video.requestFullscreen();
-    else if (video.webkitEnterFullscreen) video.webkitEnterFullscreen();
-    else if (video.webkitRequestFullscreen) video.webkitRequestFullscreen();
-    else if (video.msRequestFullscreen) video.msRequestFullscreen();
-    else alert("A fullscreen nem támogatott ezen az eszközön.");
-  };
-
-  const handleReplay = () => {
-    const video = videoRef.current;
-    if (video) {
-      video.currentTime = 0;
-      video.play();
-      setShowReplay(false);
-    }
-  };
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    const resumePlayback = () => setShowReplay(true);
-
-    if (isIOS) video.addEventListener("webkitendfullscreen", resumePlayback);
-    document.addEventListener("fullscreenchange", resumePlayback);
-    document.addEventListener("webkitfullscreenchange", resumePlayback);
-    document.addEventListener("MSFullscreenChange", resumePlayback);
-
-    return () => {
-      if (isIOS) video.removeEventListener("webkitendfullscreen", resumePlayback);
-      document.removeEventListener("fullscreenchange", resumePlayback);
-      document.removeEventListener("webkitfullscreenchange", resumePlayback);
-      document.removeEventListener("MSFullscreenChange", resumePlayback);
-    };
-  }, [isIOS]);
+  
 
   return (
     <div className="rolunk-container">
@@ -92,51 +37,14 @@ Fiatal, lelkes és maximalista csapatként hiszünk abban, hogy a részletek tes
         <div className="video-gradient-bottom-overlay" />
 
         <div className="video-box">
-          <motion.video
-            ref={videoRef}
+          <motion.img
+            src={heroImage}
+            alt="Shynee közös kép"
             className="hero-video"
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="metadata"
-            poster={poster}
-            onCanPlay={handleCanPlay}
             initial={{ opacity: 0 }}
-            animate={{ opacity: videoLoaded ? 1 : 0 }}
+            animate={{ opacity: 1 }}
             transition={{ duration: 1.5, ease: "easeInOut" }}
-          >
-            <source src={video} type="video/mp4" />
-            A böngésződ nem támogatja a videó lejátszást.
-          </motion.video>
-
-          <button
-            className="video-control-btn fullscreen-btn"
-            onClick={handleFullscreen}
-            aria-label="Fullscreen"
-          >
-            ⛶
-          </button>
-
-          {isIOS && showReplay && (
-            <button
-              className="video-control-btn replay-btn"
-              onClick={handleReplay}
-              aria-label="Replay"
-            />
-          )}
-
-          <AnimatePresence>
-            {overlayVisible && (
-              <motion.div
-                className="video-loading-overlay"
-                initial={{ opacity: 1 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 1.5, ease: "easeOut" }}
-              />
-            )}
-          </AnimatePresence>
+          />
         </div>
 
         <div className="hero-overlay">
