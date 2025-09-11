@@ -27,6 +27,7 @@ export default function RendelésKülsőBelső() {
                 "porszívózás",
                 "szőnyeg tisztítás",
                 "teljes utastér tisztítás",
+                "csomagtér tisztítás",
                 "ablaktisztítás",
                 "Kérhető kerámia csomag"
             ],
