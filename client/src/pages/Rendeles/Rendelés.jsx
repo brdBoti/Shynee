@@ -19,7 +19,7 @@ export default function Rendelés() {
             backgroundImage: `url(${shiny_outside})`,
           }}
         />
-        <div className="card-content-rendeles">Külső mosás</div>
+        <div className="card-content-rendeles">Külső tisztítás</div>
       </Link>
       <Link to="/rendeles-belso" className="card-rendeles">
         <div
@@ -28,7 +28,7 @@ export default function Rendelés() {
             backgroundImage: `url(${shiny_inside})`,
           }}
         />
-        <div className="card-content-rendeles">Belső mosás</div>
+        <div className="card-content-rendeles">Belső tisztítás</div>
       </Link>
       <Link to="/rendeles-kulso-belso" className="card-rendeles">
         <div
@@ -37,7 +37,7 @@ export default function Rendelés() {
             backgroundImage: `url(${shiny_outin})`,
           }}
         />
-        <div className="card-content-rendeles">Külső-belső mosás</div>
+        <div className="card-content-rendeles">Külső-belső tisztítás</div>
       </Link>
     </div>
   );
