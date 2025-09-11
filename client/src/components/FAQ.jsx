@@ -45,6 +45,10 @@ const faqs = [
   {
     question: 'Ott kell lenni, amikor az autót mossuk?',
     answer: 'Külső tisztítás esetén mindenképpen, mivel az ilyenkor használt vízgyűjtő ponyva leterítése után erre rá kell állni az autóval. A mosás végeztével az autóval le kell állni a ponyváról.'
+  },
+  {
+    question: 'Mi a teendő, ha egyik csomag sem felel meg teljesen az igényeinek?',
+    answer: 'Amennyiben az előre meghirdetett csomagok közül egyik sem elégíti ki teljes mértékben az Ön igényeit, kérjük, vegye fel velünk a kapcsolatot elérhetőségeinken. Igyekszünk személyre szabott megoldást kínálni, hogy az autómosás pontosan az Ön elképzeléseinek megfelelő legyen.'
   }
 ];
 
