@@ -56,6 +56,7 @@ export default function RendelésKülsőBelső() {
                 "porszívózás",
                 "vegyszeres szőnyeg tisztítás",
                 "teljes utastér tisztítás",
+                "alcantara tisztítás",
                 "vegyszeres ülés kárpit tisztítás",
                 "vegyszeres csomagtér tisztítás",
                 "műanyag és bőr ápolás",
