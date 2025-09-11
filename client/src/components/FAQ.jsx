@@ -4,27 +4,31 @@ import './FAQ.css';
 const faqs = [
   {
     question: 'Milyen településeken dolgozunk?',
-    answer: 'Budapesten és környékén – Kistarcsa, Csömör, Nagytarcsa – érhető el szolgáltatásunk. Ha nem vagy biztos benne, hogy hozzád ki tudunk menni, kérdezz bátran, és igyekszünk megoldani!'
+    answer: 'Budapesten és környékén – Kistarcsa, Csömör, Nagytarcsa – érhető el szolgáltatásuk. Ha nem biztos benne, hogy Önhöz ki tudunk menni, kérdezzen bátran, és igyekszünk megoldani!'
   },
   {
-    question: 'Hol tudunk autót mosni?',
-    answer: 'Gyakorlatilag bárhol, ahol van szabad hozzáférés az autóhoz, és elférünk körülötte. Szervizautónkkal maximum kb. 30 méterre kell tudnunk megállni. Egyetlen kizáró tényező: a nagyon forgalmas, keskeny utak, mert ott nem tudjuk garantálni a biztonságos munkát.'
+    question: 'Lehet kártyával fizetni?',
+    answer: 'Igen, készpénzt és kártyát is elfogadunk.'
+  },
+  {
+    question: 'Hol tudjuk az autót mosni?',
+    answer: 'Gyakorlatilag bárhol, ahol van szabad hozzáférés az autóhoz, elférünk körülötte. Szervizautónkkal maximum kb. 15 méterre kell tudnunk megállni. Egyetlen kizáró tényező a nagyon forgalmas, keskeny, és leejtős utak, mert ott nem tudjuk garantálni a biztonságos munkát.'
   },
   {
     question: 'Víz nélkül dolgozunk?',
-    answer: 'Nem, mert a minőség nálunk elsődleges. Víz nélkül nem lehetne olyan prémium tisztaságot biztosítani, amire büszkék vagyunk. Ha minket választasz, az autód a lehető legkíméletesebb és legprofibb mosást kapja.'
+    answer: 'Nem, mert a minőség számunkra elsődleges. Víz nélkül nem lehetne olyan prémium tisztaságot biztosítani, amire büszkék vagyunk. Ha minket választ, az autója a lehető legkíméletesebb és legprofibb mosást kapja.'
   },
   {
-    question: 'Kell áramot vagy vizet adnod?',
-    answer: 'Egyáltalán nem! Mindent viszünk magunkkal: vizet, áramot, és még a felhasznált vizet is összegyűjtjük és elszállítjuk. Neked csak hátra kell dőlnöd, mi pedig elvégezzük a munkát.'
+    question: 'Kell áramot vagy vizet biztosítani?',
+    answer: 'Egyáltalán nem! Mindent magunkkal viszünk: vizet, áramot, és a felhasznált vizet is összegyűjtjük és elszállítjuk. Önnek csak hátra kell dőlnie, mi pedig elvégezzük a munkát.'
   },
   {
     question: 'Mennyi ideig tart egy autómosás?',
-    answer: 'Ez a választott szolgáltatástól függ – egy Prémium külső tisztítás kb. 1 órát vesz igénybe, míg egy Exklúzív külső-belső csomag akár 3–4 órát is igényelhet. De a végeredmény mindig megéri a várakozást!'
+    answer: 'Ez a választott szolgáltatástól függ – egy Prémium külső tisztítás kb. 1 órát vesz igénybe, míg egy Exkluzív külső-belső csomag akár 3–4 órát is igényelhet. De a végeredmény mindig megéri a várakozást!'
   },
   {
     question: 'Vegyszeres ülés- és kárpittisztítás után mennyi a száradási idő?',
-    answer: 'Átlagosan 1–2 óra. Nyári melegben gyakran már a munka végeztével teljesen száraz az autó belseje, így azonnal használhatod.'
+    answer: 'Átlagosan 1–2 óra. Nyári melegben gyakran már a munka végeztével teljesen száraz az autó belseje, így azonnal használhatja.'
   },
   {
     question: 'Miért fontos a gumi- és műanyagápolás?',
@@ -32,9 +36,18 @@ const faqs = [
   },
   {
     question: 'Mi a különbség a wax és a kerámia bevonat között?',
-    answer: 'A wax egy vékony viaszréteget képez, ami szép fényt ad, de sajnos rövid életű – az első vegyszeres mosás után már le is oldódhat. A kerámia bevonat ezzel szemben egy mikroszkopikus kristályréteget hoz létre a fényezésen, amely akár 3 hónapig is tartós védelmet ad. Ellenáll a vegyszeres mosásnak, kiemeli a színek mélységét, és extra fényt kölcsönöz az autónak.'
+    answer: 'A wax egy vékony viaszréteget képez, amely szép fényt ad, de sajnos rövid életű – az első vegyszeres mosás után már le is oldódhat. A kerámia bevonat ezzel szemben egy mikroszkopikus kristályréteget hoz létre a fényezésen, amely akár 3 hónapig is tartós védelmet ad. Ellenáll a vegyszeres mosásnak, kiemeli a színek mélységét, és extra fényt kölcsönöz az autónak.'
+  },
+  {
+    question: 'Milyen gépjárműveket tisztítunk?',
+    answer: 'Kizárólag B kategóriás jogosítvánnyal vezethető személygépkocsikat.'
+  },
+  {
+    question: 'Ott kell lenni, amikor az autót mossuk?',
+    answer: 'Külső tisztítás esetén mindenképpen, mivel az ilyenkor használt vízgyűjtő ponyva leterítése után erre rá kell állni az autóval. A mosás végeztével az autóval le kell állni a ponyváról.'
   }
 ];
+
 
 export default function FAQ() {
   const [activeIndex, setActiveIndex] = useState(null);
