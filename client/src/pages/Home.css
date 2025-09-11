@@ -43,9 +43,44 @@ body::-webkit-scrollbar {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   position: relative;
   padding: 0;
   margin-top: 0px;
+}
+
+/* Bouncing blue arrow like on Rólunk page, scoped to Home */
+.home-container .scroll-indicator {
+  font-size: 2.4rem;
+  color: #99ddff;
+  animation: bounceHome 2s infinite;
+  user-select: none;
+  position: absolute;
+  left: 50%;
+  bottom: 12px;
+  transform: translate(-50%, 0);
+  font-family: 'Inter', sans-serif;
+}
+
+/* mobile/desktop variants like on Rólunk */
+.home-container .scroll-indicator.below { display: none; }
+
+@media (max-width: 768px) {
+  .home-container .scroll-indicator { display: none; }
+  .home-container .scroll-indicator.below {
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 8px;
+    transform: translateX(-50%);
+    animation: bounceHome 2s infinite;
+    text-align: center;
+  }
+}
+
+@keyframes bounceHome {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, 10px); }
 }
 
 /* — new gallery section styles — */

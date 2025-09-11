@@ -3,9 +3,10 @@ import { FaFacebookF, FaInstagram } from 'react-icons/fa';
 import { SiTiktok } from 'react-icons/si';
 import { Link } from 'react-router-dom';
 import './Footer.css';
-import simplepayLogo from '../images/logos/simplepay.svg';
 import visaLogo from '../images/logos/Visa_Inc._logo.svg';
 import mastercardLogo from '../images/logos/Mastercard.svg';
+import applePayLogo from '../images/logos/apple-pay-svgrepo-com.svg';
+import googlePayLogo from '../images/logos/google-pay-svgrepo-com (1).svg';
 import shyneeText from '../images/shyneetextniceres2.webp';
 
 export default function Footer() {
@@ -39,14 +40,15 @@ export default function Footer() {
           <div className="social-icons">
             <a href="https://www.instagram.com/shynee.hu/" target="_blank" rel="noreferrer" className="icon--instagram"><FaInstagram /></a>
             <a href="https://www.facebook.com/profile.php?id=61579712527671" target="_blank" rel="noreferrer"><FaFacebookF /></a>
-            <a href="https://www.tiktok.com/@shynee.budapest" target="_blank" rel="noreferrer"><SiTiktok /></a>
+            <a href="https://www.tiktok.com/@shynee.bp?lang=hu-HU" target="_blank" rel="noreferrer"><SiTiktok /></a>
           </div>
         </div>
 
         <div className="payment-logos">
-          <img src={simplepayLogo} alt="SimplePay" />
-          <img src={visaLogo} alt="Visa" />
-          <img src={mastercardLogo} alt="Mastercard" />
+          <img className="logo logo--mastercard" src={mastercardLogo} alt="Mastercard" />
+          <img className="logo logo--visa" src={visaLogo} alt="Visa" />
+          <img className="logo logo--applepay" src={applePayLogo} alt="Apple Pay" />
+          <img className="logo logo--googlepay" src={googlePayLogo} alt="Google Pay" />
         </div>
       </div>
 

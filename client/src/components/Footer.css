@@ -87,6 +87,7 @@ footer p {
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 1.5rem;
   margin-top: 2rem;
   padding-top: 1.5rem;
@@ -94,13 +95,22 @@ footer p {
 
 .payment-logos img {
   height: 30px;
-  filter: grayscale(100%) brightness(1.4);
-  transition: filter 0.3s ease;
+  filter: none;
+  transition: none;
+  display: block;
 }
 
-.payment-logos img:hover {
-  filter: none;
+/* Normalize badge-style logos (Apple Pay, Google Pay) to match text logos */
+.payment-logos .logo { height: 35px; }
+.payment-logos .logo--applepay,
+.payment-logos .logo--googlepay {
+  height: 75px;
+  vertical-align: middle;
+  transform: scale(1.2);
+  transform-origin: left center;
 }
+
+.payment-logos img:hover { filter: none; }
 
 .footer-hours ul {
   list-style: none;
@@ -186,6 +196,13 @@ footer p.copyright {
 
   .payment-logos img {
     height: 25px;
+  }
+
+  /* Make badge logos still slightly larger on mobile for parity */
+  .payment-logos .logo--applepay,
+  .payment-logos .logo--googlepay {
+    height: 38px;
+    transform: scale(1.12);
   }
 
   .footer-section.center nav {

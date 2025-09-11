@@ -42,6 +42,8 @@
       <div className="home-container">
         <section className="hero-section">
           <Title />
+          <div className="scroll-indicator">↓</div>
+          <div className="scroll-indicator below">↓</div>
         </section>
 
         <section className="gallery-section">
