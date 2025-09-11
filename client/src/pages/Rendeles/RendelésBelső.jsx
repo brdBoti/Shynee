@@ -18,7 +18,9 @@ export default function RendelésBelső() {
       features: [
         "porszívózás",
         "szőnyeg tisztítás",
-        "utastér tisztítás",
+        "teljes utastér tisztítás",
+        "csomagtér tisztítás",
+        "falcok tisztítása",
         "ablaktisztítás",
         
       ],
@@ -37,6 +39,7 @@ export default function RendelésBelső() {
         "utastér tisztítás",
         "vegyszeres ülés kárpit tisztítás",
         "vegyszeres csomagtér tisztítás",
+        "falcok tisztítása",
         "műanyag és bőr ápolás",
         "ablaktisztítás"
       ],
