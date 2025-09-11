@@ -26,7 +26,7 @@ export default function RendelésKülsőBelső() {
                 // Belső (Alap)
                 "porszívózás",
                 "szőnyeg tisztítás",
-                "utastér tisztítás",
+                "teljes utastér tisztítás",
                 "ablaktisztítás",
                 "Kérhető kerámia csomag"
             ],
@@ -55,7 +55,7 @@ export default function RendelésKülsőBelső() {
                 // Belső (Prémium)
                 "porszívózás",
                 "vegyszeres szőnyeg tisztítás",
-                "utastér tisztítás",
+                "teljes utastér tisztítás",
                 "vegyszeres ülés kárpit tisztítás",
                 "vegyszeres csomagtér tisztítás",
                 "műanyag és bőr ápolás",
