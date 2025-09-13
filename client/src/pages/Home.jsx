@@ -55,9 +55,10 @@
             <h2 style={{ 
               color: '#fff', 
               marginBottom: '2rem',
-              fontSize: '2.5rem',
+              fontSize: '2.3rem',
               fontWeight: '700',
-              textAlign: 'center'
+              textAlign: 'center',
+              fontFamily: 'Poppins, sans-serif'
             }}>
               Munkáink
             </h2>

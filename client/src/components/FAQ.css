@@ -67,10 +67,10 @@
 
 .faq-question:hover,
 .faq-block.active .faq-question {
-  color: #00e0ff;
+  color: #00aaff;
   text-shadow:
-    0 0 4px rgba(0, 224, 255, 0.7),
-    0 3px 12px rgba(0, 90, 150, 0.5);
+    0 0 2px rgba(0, 224, 255, 0.7),
+    0 3px 10px rgba(0, 90, 150, 0.5);
 }
 
 /* Smooth visszazárás */

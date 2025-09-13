@@ -61,14 +61,14 @@
   top: 0;
   bottom: 0;
   width: 4px;
-  background: linear-gradient(to bottom, #00d4ff, #00aaff);
+  background: #00aaff;
   cursor: grab;
   z-index: 3;
   transition: box-shadow 0.2s ease;
 }
 
 .slider-line:hover {
-  box-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
+  box-shadow: 0 0 20px rgba(0, 170, 255, 0.6);
 }
 
 .slider-line:active {
@@ -83,7 +83,7 @@
   transform: translate(-50%, -50%);
   width: 40px;
   height: 40px;
-  background: linear-gradient(45deg, #00d4ff, #00aaff);
+  background: #00aaff;
   border: 3px solid white;
   border-radius: 50%;
   display: flex;
@@ -95,7 +95,7 @@
 
 .slider-handle:hover {
   transform: translate(-50%, -50%) scale(1.1);
-  box-shadow: 0 6px 24px rgba(0, 212, 255, 0.4);
+  box-shadow: 0 6px 24px rgba(0, 170, 255, 0.4);
 }
 
 .slider-arrow {

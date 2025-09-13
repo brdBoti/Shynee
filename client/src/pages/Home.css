@@ -10,9 +10,6 @@ body::-webkit-scrollbar {
   /* Chrome, Safari, Edge */
 }
 
-
-
-
 /* — existing styles — */
 .home-container {
   display: flex;
@@ -21,8 +18,6 @@ body::-webkit-scrollbar {
   background-size: 400% 400%;
   animation: gradientFlow 20s ease infinite;
 }
-
-
 
 @keyframes gradientFlow {
   0% {
@@ -53,16 +48,17 @@ body::-webkit-scrollbar {
 .home-container .scroll-indicator {
   font-size: 2.4rem;
   color: #99ddff;
-  animation: bounceHome 2s infinite;
   user-select: none;
   position: absolute;
   left: 50%;
   bottom: 12px;
   transform: translate(-50%, 0);
   font-family: 'Inter', sans-serif;
+  opacity: 0;
+  animation: fadeIn 3s ease forwards 2s,  
+             bounceHome 2s infinite 2s;    
 }
 
-/* mobile/desktop variants like on Rólunk */
 .home-container .scroll-indicator.below { display: none; }
 
 @media (max-width: 768px) {
@@ -73,8 +69,10 @@ body::-webkit-scrollbar {
     left: 50%;
     bottom: 8px;
     transform: translateX(-50%);
-    animation: bounceHome 2s infinite;
     text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards 2s,
+               bounceHome 2s infinite 2s;
   }
 }
 
@@ -83,8 +81,12 @@ body::-webkit-scrollbar {
   50% { transform: translate(-50%, 10px); }
 }
 
-/* — new gallery section styles — */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 
+/* — new gallery section styles — */
 @media (max-width: 768px) {
   .gallery-section {
     width: 100%;
@@ -123,4 +125,3 @@ body::-webkit-scrollbar {
   padding: 5rem 1rem; 
   box-sizing: border-box;
 }
-
