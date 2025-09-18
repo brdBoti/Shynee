@@ -4,7 +4,7 @@ import './FAQ.css';
 const faqs = [
   {
     question: 'Milyen településeken dolgozunk?',
-    answer: 'Budapesten és környékén – Kistarcsa, Csömör, Nagytarcsa – érhető el szolgáltatásuk. Ha nem biztos benne, hogy Önhöz ki tudunk menni, kérdezzen bátran, és igyekszünk megoldani!'
+    answer: 'Az online időpontfoglalás Budapesten és környékén – Kistarcsa, Csömör, Nagytarcsa – érhető el. Ha más településre szeretné kérni a szolgáltatásunkat, az is megoldható, de ebben az esetben kérjük, telefonon vagy e-mailben egyeztessen velünk.'
   },
   {
     question: 'Lehet kártyával fizetni?',

@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 export default function Rólunk() {
 
-  const motto = "Minőség. Szenvedély. Megbízhatóság.";
+  const motto = "Mobil Autókozmetika";
 
   const imageData = [
     { image: kep2, text: `„A prémium autó prémium törődést érdemel.”
