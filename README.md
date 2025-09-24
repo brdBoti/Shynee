@@ -9,7 +9,6 @@ This repository (`shynee`) will serve as the **monorepo** containing:
 
 - The **frontend** (React)  
 - Infrastructure as Code (IaC) using **Terraform** for AWS EKS  
-- Kubernetes manifests for deployment  
 - Docker setup for containerization and local development  
 
 ---
@@ -23,36 +22,25 @@ This repository (`shynee`) will serve as the **monorepo** containing:
 - Integrate company branding (logo, colors, design)  
 - Add redirection to external booking platform (Salonic)  
 
-Project structure (current):  
-```bash
-client/               # React frontend
-```
-
 ### Phase 2 – Containerization (In Progress)
 
 - Dockerize frontend React app  
-- Setup `docker-compose` for local development  
 - Add `.env.example` for environment variables  
 
 ---
 
-### Phase 3 – Infrastructure on AWS
+### Phase 3 – Infrastructure on AWS (Planned)
 
-- Provision AWS resources with Terraform  
+- Provision AWS resources with Terraform:  
   - VPC, subnets, security groups  
-  - EKS cluster for Kubernetes  
+  - EKS cluster for future deployments  
 - Push Docker images to Amazon ECR  
-- Deploy React app to EKS with Kubernetes manifests  
+- Deploy React app to EKS in the future  
 
 Planned monorepo structure:  
 ```bash
 Shynee/
 ├── client/                     # React frontend
-│   ├── Dockerfile
-│   ├── .dockerignore
-│   ├── package.json
-│   ├── src/
-│   └── public/
 │
 ├── infra/
 │   └── terraform/
@@ -80,12 +68,7 @@ Shynee/
 │               └── variables.tf
 │
 └── README.md
-
-
 ```
-
----
-
 ## Tech Stack
 
 **Frontend**  
@@ -94,9 +77,9 @@ Shynee/
 - CSS (custom design + Shynee branding)  
 
 **Infrastructure**  
-- Docker & Docker Compose  
-- Terraform (AWS provider)  
-- Kubernetes (AWS EKS)  
+- Docker for containerization  
+- Terraform (AWS provider) for IaC  
+- AWS EKS (cluster provisioned via Terraform, deployments planned)  
 - AWS ECR for container registry  
 
 ---
@@ -104,4 +87,6 @@ Shynee/
 ## Current Deployment
 
 The Shynee React app is currently hosted on **Netlify** for production.  
-Future deployments will be handled through **Docker + AWS EKS** for scalability and reliability.
+Future deployments will be handled through **Docker + AWS EKS** for scalability and reliability.  
+
+---
