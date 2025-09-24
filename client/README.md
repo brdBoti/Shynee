@@ -1,1 +1,0 @@
-# Ez a weboldal a kedves Burda testvérek vállalkozásához fűződik.
