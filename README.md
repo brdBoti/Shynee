@@ -46,16 +46,36 @@ client/               # React frontend
 
 Planned monorepo structure:  
 ```bash
-infra/                   # Infra-as-code (Terraform + K8s)
-├── terraform/            # Terraform configs
-│   ├── provider.tf       # AWS provider config
-│   ├── vpc.tf            # VPC definition
-│   ├── eks.tf            # EKS cluster creation
-│   ├── outputs.tf
-│   └── variables.tf
-└── k8s/                  # Kubernetes manifests
-    ├── react-deployment.yaml
-    └── react-service.yaml
+Shynee/
+├── client/                     # React frontend
+│
+├── infra/
+│   └── terraform/
+│       ├── .gitignore
+│       ├── main.tf
+│       ├── variables.tf
+│       ├── terraform.tfvars
+│       ├── providers.tf
+│       ├── versions.tf
+│       │
+│       └── modules/
+│           ├── vpc/
+│           │   ├── main.tf
+│           │   ├── outputs.tf
+│           │   └── variables.tf
+│           │
+│           ├── eks/
+│           │   ├── main.tf
+│           │   ├── outputs.tf
+│           │   └── variables.tf
+│           │
+│           └── ecr/
+│               ├── main.tf
+│               ├── outputs.tf
+│               └── variables.tf
+│
+└── README.md
+
 ```
 
 ---
