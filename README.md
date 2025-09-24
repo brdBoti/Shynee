@@ -48,11 +48,16 @@ Planned monorepo structure:
 ```bash
 Shynee/
 ├── client/                     # React frontend
+│   ├── Dockerfile
+│   ├── .dockerignore
+│   ├── package.json
+│   ├── src/
+│   └── public/
 │
 ├── infra/
 │   └── terraform/
-│       ├── .gitignore
-│       ├── main.tf
+│       ├── .gitignore          
+│       ├── main.tf         
 │       ├── variables.tf
 │       ├── terraform.tfvars
 │       ├── providers.tf
@@ -75,6 +80,7 @@ Shynee/
 │               └── variables.tf
 │
 └── README.md
+
 
 ```
 
