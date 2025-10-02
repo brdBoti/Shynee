@@ -125,3 +125,51 @@ body::-webkit-scrollbar {
   padding: 5rem 1rem; 
   box-sizing: border-box;
 }
+
+.social-cta {
+  text-align: center;
+  margin: 2rem 0 0 0;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 1.25rem;
+}
+
+.social-cta__text {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.social-cta__links a {
+  color: #00aaff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease, text-shadow 0.2s ease, transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  margin: 0 4px;
+  background: rgba(0, 170, 255, 0.08);
+}
+
+.social-cta__links a:hover {
+  color: #33c7ff;
+  text-shadow: 0 0 6px rgba(0, 224, 255, 0.4);
+  transform: translateY(-2px);
+  background: rgba(0, 170, 255, 0.18);
+}
+
+.social-cta__links .dot {
+  color: #888;
+  margin: 0 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .social-cta__text { font-size: 1.05rem; }
+  .social-cta__links { font-size: 1rem; }
+}

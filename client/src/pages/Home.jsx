@@ -1,6 +1,8 @@
   import React from 'react';
-  import Title from '../components/Title';
-  import BeforeAfterSlider from '../components/BeforeAfterSlider';
+import Title from '../components/Title';
+import BeforeAfterSlider from '../components/BeforeAfterSlider';
+import { FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa';
+import { SiTiktok } from 'react-icons/si';
 
   import bmw_3k from '../images/bmw_3k.webp';
   import bmw_3t from '../images/bmw_3t.webp';
@@ -83,6 +85,17 @@
                   />
                 </div>
               ))}
+            </div>
+            <div className="social-cta">
+              <p className="social-cta__text">
+                További referenciákért látogass el közösségi média oldalainkra:
+              </p>
+              <div className="social-cta__links">
+                <a href="https://www.instagram.com/shynee.hu/" target="_blank" rel="noreferrer" aria-label="Instagram" title="Instagram"><FaInstagram /></a>
+                <a href="https://www.facebook.com/profile.php?id=61579712527671" target="_blank" rel="noreferrer" aria-label="Facebook" title="Facebook"><FaFacebookF /></a>
+                <a href="https://www.tiktok.com/@shynee.bp?lang=hu-HU" target="_blank" rel="noreferrer" aria-label="TikTok" title="TikTok"><SiTiktok /></a>
+                <a href="https://www.youtube.com/@Shynee_bp" target="_blank" rel="noreferrer" aria-label="YouTube" title="YouTube"><FaYoutube /></a>
+              </div>
             </div>
           </div>
         </section>
