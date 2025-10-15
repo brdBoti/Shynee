@@ -13,7 +13,8 @@ export default function Card({
   buttonText = "Rendelés", 
   page, 
   link, 
-  ceramicLink 
+  ceramicLink,
+  baseFeatures = []
 }) {
   const [flipped, setFlipped] = useState(false);
 
@@ -52,28 +53,40 @@ export default function Card({
           {subtitle && <p className="sub-title">{subtitle}</p>}
 
           <ul className="list">
-            {features.map((feature, i) => {
-              const text = typeof feature === 'string' ? feature.trim().toLowerCase() : '';
-              const isExtra = text.includes('extra') || text.includes('kerámia csomag');
-              const isCeramic = text.includes('kerámia csomag');
-              const capitalizedFeature = typeof feature === 'string' ? 
-                feature.charAt(0).toUpperCase() + feature.slice(1) : feature;
-              return (
-                <li className={`list-item ${isExtra ? 'is-extra' : ''}`} key={i}>
-                  <span className="check">{isExtra ? '+' : '✓'}</span> {capitalizedFeature}
-                  {isCeramic && (
-                    <div className="info-tooltip">
-                      <span className="info-icon">i</span>
-                      <div className="tooltip-content">
-                        <div className="tooltip-item">Fémrészecske-eltávolítás</div>
-                        <div className="tooltip-item">Agyag gyurmás mélytisztítás</div>
-                        <div className="tooltip-item">Gyors kerámia bevonat</div>
+            {(() => {
+              const normalizedBase = Array.isArray(baseFeatures)
+                ? new Set(baseFeatures.filter(f => typeof f === 'string').map(f => f.trim().toLowerCase()))
+                : new Set();
+              return features.map((feature, i) => {
+                const text = typeof feature === 'string' ? feature.trim().toLowerCase() : '';
+                const isCeramic = text.includes('kerámia csomag');
+                let isShared = title === 'Ultra' && normalizedBase.has(text);
+                let isExtra = title === 'Ultra' && !isShared;
+                if (isCeramic) {
+                  // Mindig plusz jellel és extra-ként jelenjen meg a kerámia
+                  isShared = false;
+                  isExtra = true;
+                }
+                const capitalizedFeature = typeof feature === 'string' ? 
+                  feature.charAt(0).toUpperCase() + feature.slice(1) : feature;
+                const checkChar = isCeramic ? '+' : '✓';
+                return (
+                  <li className={`list-item ${isShared ? 'is-shared' : ''} ${isExtra ? 'is-extra' : ''}`} key={i}>
+                    <span className="check">{checkChar}</span> {capitalizedFeature}
+                    {isCeramic && (
+                      <div className="info-tooltip">
+                        <span className="info-icon">i</span>
+                        <div className="tooltip-content">
+                          <div className="tooltip-item">Fémrészecske-eltávolítás</div>
+                          <div className="tooltip-item">Agyag gyurmás mélytisztítás</div>
+                          <div className="tooltip-item">Gyors kerámia bevonat</div>
+                        </div>
                       </div>
-                    </div>
-                  )}
-                </li>
-              );
-            })}
+                    )}
+                  </li>
+                );
+              });
+            })()}
           </ul>
 
           {/* --- Rendelés gombok --- */}

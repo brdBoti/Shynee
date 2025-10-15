@@ -64,6 +64,22 @@ export default function RendelésKülsőBelső() {
                 "ablaktisztítás",
                 "Kérhető kerámia csomag"
             ],
+            baseFeatures: [
+                // Külső (Prémium)
+                "rovaroldás",
+                "aktív hab",
+                "samponos kézi mosás",
+                "falcok tisztítása",
+                "viasz",
+                "szárítás",
+                // Belső (Prémium)
+                "porszívózás",
+                "szőnyeg tisztítás",
+                "teljes utastér tisztítás",
+                "csomagtér tisztítás",
+                "ablaktisztítás",
+                "kérhető kerámia csomag"
+            ],
             buttonText: "Rendelés",
             page: "rendeleskulsobelso",
             link: "https://shynee.salonic.hu/selectDate/?employeeId=27333&placeId=12457&serviceId=408365&startDate=1757570400&back=%2FselectEmployee%2F%3FplaceId%3D12457%26serviceId%3D408365",

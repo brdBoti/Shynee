@@ -47,6 +47,15 @@ export default function RendelésKülső() {
       "gumiápolás",
       "Kérhető kerámia csomag"
     ],
+    baseFeatures: [
+      "rovaroldás",
+      "aktív hab",
+      "samponos kézi mosás",
+      "falcok tisztítása",
+      "viasz",
+      "szárítás",
+      "kérhető kerámia csomag"
+    ],
     buttonText: "Rendelés",
     page: "rendeleskulso",
     link: "https://shynee.salonic.hu/selectDate/?employeeId=27333&placeId=12457&serviceId=408362&startDate=1757570400&back=%2FselectEmployee%2F%3FplaceId%3D12457%26serviceId%3D408362",

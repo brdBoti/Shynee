@@ -420,6 +420,11 @@
   color: #4a90e2;
   text-shadow: 0 0 4px #4a90e280;
 }
+/* Ultra kártyán a Prémiumban is szereplő tételek pipája legyen szürke */
+.card-blue .list .list-item.is-shared .check {
+  color: #9aa0a6; /* grey */
+  text-shadow: 0 0 0 transparent;
+}
 .card-blue .sub-title,
 .card-blue .pricing-time {
   color: #357abd;
