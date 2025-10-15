@@ -19,7 +19,7 @@ const faqs = [
     answer: 'Nem, mert a minőség számunkra elsődleges. Víz nélkül nem lehetne olyan prémium tisztaságot biztosítani, amire büszkék vagyunk. Ha minket választ, az autója a lehető legkíméletesebb és legprofibb mosást kapja.'
   },
   {
-    question: 'Vállunk céges flotta tisztítást is?',
+    question: 'Vállalunk céges flotta tisztítást is?',
     answer: 'Igen, flották mosását és tisztítását is biztosítjuk. Vegye fel velünk a kapcsolatot telefonon vagy e-mailben, és egyeztetjük az időpontot, illetve a részleteket.'
   },
   {
