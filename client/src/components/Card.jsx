@@ -80,6 +80,7 @@ export default function Card({
                           <div className="tooltip-item">Fémrészecske-eltávolítás</div>
                           <div className="tooltip-item">Agyag gyurmás mélytisztítás</div>
                           <div className="tooltip-item">Gyors kerámia bevonat</div>
+                          <div className="tooltip-item tooltip-price">Ár: 18 900 Ft</div>
                         </div>
                       </div>
                     )}

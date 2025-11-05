@@ -8,8 +8,10 @@ import 'normalize.css';
 import RendelésKülső from './pages/Rendeles/RendelésKülső';
 import RendelésBelső from './pages/Rendeles/RendelésBelső';
 import RendelésKülsőBelső from './pages/Rendeles/RendelésKülsőBelső';
+import RendelésTéliCsomagok from './pages/Rendeles/RendelésTéliCsomagok';
 
 function App() {
+  const SHOW_WINTER_PACKAGES = false;
   return (
     <Router>
       <Routes>
@@ -21,6 +23,9 @@ function App() {
           <Route path="rendeles-kulso" element={<RendelésKülső />} />
           <Route path="rendeles-belso" element={<RendelésBelső />} />
           <Route path="rendeles-kulso-belso" element={<RendelésKülsőBelső />} />
+          {SHOW_WINTER_PACKAGES && (
+            <Route path="rendeles-teli-csomagok" element={<RendelésTéliCsomagok />} />
+          )}
         </Route>
       </Routes>
     </Router>

@@ -260,6 +260,12 @@
   margin-bottom: 0;
 }
 
+/* Price line emphasis in ceramic tooltip */
+.tooltip-price {
+  font-weight: 700;
+  margin-top: 6px;
+}
+
 /* === Buttons === */
 .button {
   cursor: pointer;
